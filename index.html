@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>Brazil Airports, 2023</title>
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@5"></script>
   <style>
     body { font-family: Arial, sans-serif; }
     #vis { width: 100%; height: 100%; }
@@ -15,214 +15,97 @@
   <div id="vis"></div>
   <script type="text/javascript">
     var spec = {
-      "$schema": "https://vega.github.io/schema/vega/v5.json",
-      "width": 900,
-      "height": 560,
-      "padding": {"top": 25, "left": 0, "right": 0, "bottom": 0},
-      "autosize": "none",
-
-      "signals": [
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "description": "An interactive visualization of connections among major U.S. airports in 2008. Based on a U.S. airports example by Mike Bostock.",
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "fill": "#ddd",
+        "stroke": "#fff",
+        "strokeWidth": 1
+      },
+      "data": {
+        "url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/br_states.json",
+        "format": {"type": "topojson", "feature": "states"}
+      }
+    },
+    {
+      "mark": {"type": "rule", "color": "#000", "opacity": 0.35},
+      "data": {"url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/flights-airport.csv"},
+      "transform": [
+        {"filter": {"param": "org", "empty": false}},
         {
-          "name": "hover",
-          "value": null,
-          "on": [
-            {"events": "@cell:mouseover", "update": "datum"},
-            {"events": "@cell:mouseout", "update": "null"}
-          ]
+          "lookup": "origin",
+          "from": {
+            "data": {"url": "data/airports.csv"},
+            "key": "iata",
+            "fields": ["latitude", "longitude"]
+          }
         },
         {
-          "name": "title",
-          "value": "Brazil Airports, 2023",
-          "update": "hover ? hover.name + ' (' + hover.iata + ')' : 'Brazil Airports, 2023'"
-        },
-        {
-          "name": "cell_stroke",
-          "value": null,
-          "on": [
-            {"events": "dblclick", "update": "cell_stroke ? null : 'brown'"},
-            {"events": "mousedown!", "update": "cell_stroke"}
-          ]
+          "lookup": "destination",
+          "from": {
+            "data": {"url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/airports.csv"},
+            "key": "iata",
+            "fields": ["latitude", "longitude"]
+          },
+          "as": ["lat2", "lon2"]
         }
       ],
-
-      "data": [
+      "encoding": {
+        "latitude": {"field": "latitude"},
+        "longitude": {"field": "longitude"},
+        "latitude2": {"field": "lat2"},
+        "longitude2": {"field": "lon2"}
+      }
+    },
+    {
+      "mark": {"type": "circle"},
+      "data": {"url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/flights-airport.csv"},
+      "transform": [
+        {"aggregate": [{"op": "count", "as": "routes"}], "groupby": ["origin"]},
         {
-          "name": "states",
-          "url": "data/br_states.json",
-          "format": {"type": "topojson", "feature": "states"},
-          "transform": [
-            {
-              "type": "geopath",
-              "projection": "projection"
-            }
-          ]
+          "lookup": "origin",
+          "from": {
+            "data": {"url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/airports.csv"},
+            "key": "iata",
+            "fields": ["state", "latitude", "longitude"]
+          }
         },
-        {
-          "name": "traffic",
-          "url": "data/flights-airport.csv",
-          "format": {"type": "csv", "parse": "auto"},
-          "transform": [
-            {
-              "type": "aggregate",
-              "groupby": ["origin"],
-              "fields": ["count"], "ops": ["sum"], "as": ["flights"]
-            }
-          ]
-        },
-        {
-          "name": "airports",
-          "url": "data/airports.csv",
-          "format": {"type": "csv", "parse": "auto"},
-          "transform": [
-            {
-              "type": "lookup",
-              "from": "traffic", "key": "origin",
-              "fields": ["iata"], "as": ["traffic"]
-            },
-            {
-              "type": "filter",
-              "expr": "datum.traffic != null"
-            },
-            {
-              "type": "geopoint",
-              "projection": "projection",
-              "fields": ["longitude", "latitude"]
-            },
-            {
-              "type": "filter",
-              "expr": "datum.x != null && datum.y != null"
-            },
-            {
-              "type": "voronoi", "x": "x", "y": "y"
-            },
-            {
-              "type": "collect", "sort": {
-                "field": "traffic.flights",
-                "order": "descending"
-              }
-            }
-          ]
-        },
-        {
-          "name": "routes",
-          "url": "data/flights-airport.csv",
-          "format": {"type": "csv", "parse": "auto"},
-          "transform": [
-            {
-              "type": "filter",
-              "expr": "hover && hover.iata == datum.origin"
-            },
-            {
-              "type": "lookup",
-              "from": "airports", "key": "iata",
-              "fields": ["origin", "destination"], "as": ["source", "target"]
-            },
-            {
-              "type": "filter",
-              "expr": "datum.source && datum.target"
-            },
-            {
-              "type": "linkpath",
-              "shape": "line"
-            }
-          ]
-        }
+        {"filter": "datum.state !== 'PR' && datum.state !== 'VI'"}
       ],
-
-      "projections": [
-        {
-          "name": "projection",
-          "type": "mercator",
-          "scale": 1200,
-          "translate": [{"signal": "width / 2"}, {"signal": "height / 2"}]
+      "params": [{
+        "name": "org",
+        "select": {
+          "type": "point",
+          "on": "pointerover",
+          "nearest": true,
+          "fields": ["origin"]
         }
-      ],
-
-      "scales": [
-        {
-          "name": "size",
-          "type": "linear",
-          "domain": {"data": "traffic", "field": "flights"},
-          "range": [16, 1000]
+      }],
+      "encoding": {
+        "latitude": {"field": "latitude"},
+        "longitude": {"field": "longitude"},
+        "size": {
+          "field": "routes",
+          "type": "quantitative",
+          "scale": {"rangeMax": 1000},
+          "legend": null
+        },
+        "order": {
+          "field": "routes",
+          "sort": "descending"
         }
-      ],
+      }
+    }
+  ],
+  "projection": {"type": "mercator"},
+  "width": 900,
+  "height": 500
+}
+; 
 
-      "marks": [
-        {
-          "type": "path",
-          "from": {"data": "states"},
-          "encode": {
-            "enter": {
-              "fill": {"value": "#dedede"},
-              "stroke": {"value": "white"}
-            },
-            "update": {
-              "path": {"field": "path"}
-            }
-          }
-        },
-        {
-          "type": "symbol",
-          "from": {"data": "airports"},
-          "encode": {
-            "enter": {
-              "size": {"scale": "size", "field": "traffic.flights"},
-              "fill": {"value": "steelblue"},
-              "fillOpacity": {"value": 0.8},
-              "stroke": {"value": "white"},
-              "strokeWidth": {"value": 1.5}
-            },
-            "update": {
-              "x": {"field": "x"},
-              "y": {"field": "y"}
-            }
-          }
-        },
-        {
-          "type": "path",
-          "name": "cell",
-          "from": {"data": "airports"},
-          "encode": {
-            "enter": {
-              "fill": {"value": "transparent"},
-              "strokeWidth": {"value": 0.35}
-            },
-            "update": {
-              "path": {"field": "path"},
-              "stroke": {"signal": "cell_stroke"}
-            }
-          }
-        },
-        {
-          "type": "path",
-          "interactive": false,
-          "from": {"data": "routes"},
-          "encode": {
-            "enter": {
-              "path": {"field": "path"},
-              "stroke": {"value": "black"},
-              "strokeOpacity": {"value": 0.35}
-            }
-          }
-        },
-        {
-          "type": "text",
-          "interactive": false,
-          "encode": {
-            "enter": {
-              "x": {"signal": "width", "offset": -5},
-              "y": {"value": 0},
-              "fill": {"value": "black"},
-              "fontSize": {"value": 20},
-              "align": {"value": "right"}
-            },
-            "update": {
-              "text": {"signal": "title"}
-            }
-          }
-        }
-      ]
-    };
 
     vegaEmbed('#vis', spec).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
