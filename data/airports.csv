@@ -1,0 +1,495 @@
+iata,name,city,state,country,latitude,longitude
+SDZG,Pedro Teixeira Castelo Regional Tauá,Tauá,Ceará,Brazil,-5.9333333,-40.2975
+SDIG,Ibitinga,Ibitinga,São Paulo,Brazil,-21.747222,-48.855833
+SBVT,Eurico de Aguiar Salles,Vitória,Espírito Santo,Brazil,-20.258056,-40.286389
+SNJK,Jequié,Jequié,Bahia,Brazil,-13.877778,-40.071389
+SSKU,Lauro Antônio da Costa,Curitibanos,Santa Catarina,Brazil,-27.287222,-50.603889
+SBJV,Lauro Carneiro de Loyola,Joinville,Santa Catarina,Brazil,-26.223056,-48.797778
+SSEP,São Sepé,São Sepé,Rio Grande do Sul,Brazil,-30.182222,-53.579444
+SBDO,Dourados,Dourados,Mato Grosso do Sul,Brazil,-22.200556,-54.925556
+SJRG,Regional de Rio Grande,Rio Grande,Rio Grande do Sul,Brazil,-32.083611,-52.167778
+SSXX,Municipal João Winckler,Xanxerê,Santa Catarina,Brazil,-26.875,-52.372778
+SNGD,Guadalupe,Guadalupe,Piauí,Brazil,-6.7830556,-43.580833
+SBCR,Corumbá,Corumbá,Mato Grosso do Sul,Brazil,-19.011944,-57.671389
+SNKR,Corrente,Corrente,Piauí,Brazil,-10.451944,-45.136389
+SWDM,Diamantino,Diamantino,Mato Grosso,Brazil,-14.376667,-56.400556
+SSVI,Ângelo Ponzoni,Videira,Santa Catarina,Brazil,-26.999722,-51.141389
+SWKO,Coari,Coari,Amazonas,Brazil,-4.1341667,-63.1325
+SDTF,Tatuí,Tatuí,São Paulo,Brazil,-23.331944,-47.88
+SSIJ,Ijuí,Ijuí,Rio Grande do Sul,Brazil,-28.368611,-53.846389
+SBGM,Guajará-Mirim,Guajará-Mirim,Rondônia,Brazil,-10.788333,-65.281667
+SNLT,Paulistana,Paulistana,Piauí,Brazil,-8.1663889,-41.153889
+SDIY,João Durval Carneiro,Feira de Santana,Bahia,Brazil,-12.200556,-38.906389
+SNTQ,Buritirama,Buritirama,Bahia,Brazil,-10.721667,-43.653611
+SNCT,Caratinga,Ubaporanga,Minas Gerais,Brazil,-19.725278,-42.112222
+SDPE,Porto Nacional,Porto Nacional,Tocantins,Brazil,-10.718056,-48.398889
+SWCA,Carauari,Carauari,Amazonas,Brazil,-4.8713889,-66.8975
+SWKC,Cáceres,Cáceres,Mato Grosso,Brazil,-16.0425,-57.63
+SSGA,Garibaldi,Garibaldi,Rio Grande do Sul,Brazil,-29.268333,-51.532222
+SWBG,André Antônio Maggi,Pontes e Lacerda,Mato Grosso,Brazil,-15.193333,-59.385278
+SBSN,Maestro Wilson Fonseca,Santarém,Pará,Brazil,-2.4247222,-54.785833
+SDFX,Casa Nova,Casa Nova,Bahia,Brazil,-9.1575,-40.9375
+SNHS,Santa Magalhães,Serra Talhada,Pernambuco,Brazil,-8.0613889,-38.328611
+SSKG,Estância Santa Maria,Campo Grande,Mato Grosso do Sul,Brazil,-20.505556,-54.524722
+SSAE,Arroio Grande,Arroio Grande,Rio Grande do Sul,Brazil,-32.229167,-53.055833
+SBPF,Lauro Kurtz,Passo Fundo,Rio Grande do Sul,Brazil,-28.244167,-52.328333
+SBTE,SENADOR PETRÔNIO PORTELLA,Teresina,Piauí,Brazil,-5.0605556,-42.824444
+SSCP,Francisco Lacerda Júnior,Cornélio Procópio,Paraná,Brazil,-23.1525,-50.6025
+SWXM,Regional Orlando Villas Boas,Matupá,Mato Grosso,Brazil,-10.17,-54.953889
+SSRU,São Lourenço do Sul,São Lourenço do Sul,Rio Grande do Sul,Brazil,-31.384722,-52.0325
+SSMJ,Maracaju,Maracaju,Mato Grosso do Sul,Brazil,-21.633889,-55.145
+SWJW,Jataí,Jataí,Goiás,Brazil,-17.83,-51.775278
+SNIT,Ibotirama,Ibotirama,Bahia,Brazil,-12.168333,-43.2225
+SBPB,Prefeito Doutor João Silva Filho,Parnaíba,Piauí,Brazil,-2.8933333,-41.730278
+SNLO,São Lourenço,São Lourenço,Minas Gerais,Brazil,-22.090833,-45.044444
+SBGW,Guaratinguetá,Guaratinguetá,São Paulo,Brazil,-22.791667,-45.204444
+SNYE,Pinheiro,Pinheiro,Maranhão,Brazil,-2.4775,-45.105
+SSSB,São Borja,São Borja,Rio Grande do Sul,Brazil,-28.654722,-56.034722
+SIBU,JERÔNIMO SÉRGIO ROSADO MAIA,Catolé do Rocha,Paraíba,Brazil,-6.3625,-37.755278
+SNNU,Nanuque,Nanuque,Minas Gerais,Brazil,-17.823056,-40.329722
+SJOG,Ariquemes,Ariquemes,Rondônia,Brazil,-9.8805556,-63.047222
+SBBW,Barra do Garças,Barra do Garças,Mato Grosso,Brazil,-15.861389,-52.388889
+SNIB,Itaberaba,Itaberaba,Bahia,Brazil,-12.499722,-40.270278
+SSIQ,Itaqui,Itaqui,Rio Grande do Sul,Brazil,-29.171944,-56.538333
+SNNE,Sebastião Carlos Leite,São João Nepomuceno,Minas Gerais,Brazil,-21.542222,-43.021111
+SSCI,Coxim,Coxim,Mato Grosso do Sul,Brazil,-18.481389,-54.715833
+SNMK,Mocambinho,Jaíba,Minas Gerais,Brazil,-15.093056,-43.979167
+SBGV,Coronel Altino Machado,Governador Valadares,Minas Gerais,Brazil,-18.896111,-41.983333
+SBGL,RIO DE JANEIRO/GALEÃO - ANTÔNIO CARLOS JOBIM,Rio de Janeiro,Rio de Janeiro,Brazil,-22.81,-43.250556
+SWYN,Apuí,Apuí,Amazonas,Brazil,-7.1722222,-59.838889
+SSSC,Santa Cruz do Sul,Santa Cruz do Sul,Rio Grande do Sul,Brazil,-29.684167,-52.412222
+SBPJ,BRIGADEIRO LYSIAS RODRIGUES,Palmas,Tocantins,Brazil,-10.29,-48.357778
+SSLO,Attillio Accorsi,Loanda,Paraná,Brazil,-22.917778,-53.149722
+SDMH,Mirassol,Mirassol,São Paulo,Brazil,-20.807222,-49.486111
+SDJO,São Joaquim da Barra,São Joaquim da Barra,São Paulo,Brazil,-20.593333,-47.842222
+SDPV,Presidente Venceslau,Presidente Venceslau,São Paulo,Brazil,-21.893333,-51.884444
+SBRB,Plácido de Castro,Rio Branco,Acre,Brazil,-9.8683333,-67.898056
+SBTK,Tarauacá,Tarauacá,Acre,Brazil,-8.1552778,-70.783056
+SBCD,Prefeito Dr. Carlos Alberto da Costa Neves,Caçador,Santa Catarina,Brazil,-26.788056,-50.94
+SBAU,Araçatuba,Araçatuba,São Paulo,Brazil,-21.144167,-50.426389
+SBJU,Orlando Bezerra de Menezes,Juazeiro do Norte,Ceará,Brazil,-7.2191667,-39.269444
+SDTK,Paraty,Paraty,Rio de Janeiro,Brazil,-23.223889,-44.723333
+SSPM,Porto Murtinho,Porto Murtinho,Mato Grosso do Sul,Brazil,-21.712778,-57.879167
+SWFR,Formosa,Formosa,Goiás,Brazil,-15.556111,-47.344722
+SBIC,Itacoatiara,Itacoatiara,Amazonas,Brazil,-3.1263889,-58.481667
+SNWS,Crateús,Crateús,Ceará,Brazil,-5.2111111,-40.704167
+SBVC,Glauber de Andrade Rocha,Vitória da Conquista,Bahia,Brazil,-14.907778,-40.914722
+SBGO,SANTA GENOVEVA/GOIÂNIA,Goiânia,Goiás,Brazil,-16.6325,-49.221111
+SBLP,Bom Jesus da Lapa,Bom Jesus da Lapa,Bahia,Brazil,-13.261389,-43.4075
+SDLP,Municipal José Boso,Lençóis Paulista,São Paulo,Brazil,-22.578333,-48.774444
+SNSG,Salgueiro,Salgueiro,Pernambuco,Brazil,-8.0466667,-39.133889
+SNAE,Arcoverde,Arcoverde,Pernambuco,Brazil,-8.4077778,-37.088333
+SSRF,Castro Alves,Castro Alves,Bahia,Brazil,-12.767778,-39.444722
+SNGA,Guarapari,Guarapari,Espírito Santo,Brazil,-20.646389,-40.491667
+SWLC,General Leite de Castro,Rio Verde,Goiás,Brazil,-17.834722,-50.956111
+SNOX,Oriximiná,Oriximiná,Pará,Brazil,-1.7136111,-55.835833
+SBCB,Cabo Frio,Cabo Frio,Rio de Janeiro,Brazil,-22.920833,-42.071389
+SDRS,Resende,Resende,Rio de Janeiro,Brazil,-22.478611,-44.481667
+SBSG,Aeroporto Internacional do Rio Grande do Norte / São Gonçalo do Amarante - Governador Aluizio Alves,Natal,Rio Grande do Norte,Brazil,-5.7688889,-35.366389
+SJBY,João Silva,Santa Inês,Maranhão,Brazil,-3.6544444,-45.345278
+SNBI,Bacabal,Bacabal,Maranhão,Brazil,-4.2280556,-44.819722
+SSTB,Três Barras,Três Barras,Santa Catarina,Brazil,-26.135278,-50.310556
+SWRO,Aeroclube de Rondônia,Porto Velho,Rondônia,Brazil,-8.7941667,-63.8575
+SBIP,Usiminas,Santana do Paraíso,Minas Gerais,Brazil,-19.470556,-42.488056
+SSLN,Helmuth Baungartem,Lontras,Santa Catarina,Brazil,-27.159722,-49.542778
+SNVS,Breves,Breves,Pará,Brazil,-1.6363889,-50.443333
+SBSO,Regional de Sorriso Adolino Bedin,Sorriso,Mato Grosso,Brazil,-12.472778,-55.668889
+SBCA,Aeroporto Regional do Oeste - Cel. Adalberto Mendes da Silva - Cascavel - Paraná,Cascavel,Paraná,Brazil,-25.002222,-53.501944
+SNDV,Brigadeiro Antônio Cabral,Divinópolis,Minas Gerais,Brazil,-20.181944,-44.87
+SDCA,Capão Bonito,Capão Bonito,São Paulo,Brazil,-24.033611,-48.356944
+SNMJ,Maracás,Maracás,Bahia,Brazil,-13.386111,-40.466111
+SSNH,Novo Hamburgo,Novo Hamburgo,Rio Grande do Sul,Brazil,-29.699167,-51.081944
+SSPI,Edu Chaves,Paranavaí,Paraná,Brazil,-23.09,-52.488611
+SNSE,Sento Sé,Sento Sé,Bahia,Brazil,-9.7575,-41.855
+SSSD,Soledade,Soledade,Rio Grande do Sul,Brazil,-28.863333,-52.540556
+SWTS,Tangará da Serra,Tangará da Serra,Mato Grosso,Brazil,-14.661944,-57.443889
+SNRX,Riachão,Riachão,Maranhão,Brazil,-7.3463889,-46.6275
+SBDN,Presidente Prudente,Presidente Prudente,São Paulo,Brazil,-22.175,-51.424444
+SBBR,Presidente Juscelino Kubitschek,Brasília,Distrito Federal,Brazil,-15.871111,-47.918611
+SSGY,Guaíra,Guaíra,Paraná,Brazil,-24.079722,-54.188056
+SNAX,Marcelo Pires Halzhausen,Assis,São Paulo,Brazil,-22.638611,-50.455833
+SSBV,Bela Vista,Bela Vista,Mato Grosso do Sul,Brazil,-22.082222,-56.538333
+SDNH,Novo Horizonte,Novo Horizonte,São Paulo,Brazil,-21.497778,-49.234444
+SDNO,Nelson Garófalo,São Manuel,São Paulo,Brazil,-22.696111,-48.576111
+SNJR,Prefeito Octávio de Almeida Neves,São João Del Rei,Minas Gerais,Brazil,-21.085556,-44.225278
+SNPC,Picos,Picos,Piauí,Brazil,-7.0613889,-41.525833
+SNPJ,Patrocínio,Patrocínio,Minas Gerais,Brazil,-18.909167,-46.982778
+SNYU,ITURAMA,Iturama,Minas Gerais,Brazil,-19.717222,-50.220278
+SSKM,Campo Mourão,Campo Mourão,Paraná,Brazil,-24.0025,-52.356944
+SBIH,Itaituba,Itaituba,Pará,Brazil,-4.2422222,-56.000833
+SBSI,Presidente João Batista Figueiredo,Sinop,Mato Grosso,Brazil,-11.885,-55.586111
+SBAE,Bauru/Arealva,Bauru,São Paulo,Brazil,-22.157778,-49.068333
+SNQV,Curvelo,Curvelo,Minas Gerais,Brazil,-18.749444,-44.458056
+SWEI,Eirunepé,Eirunepé,Amazonas,Brazil,-6.6394444,-69.879722
+SNGN,Garanhuns,Garanhuns,Pernambuco,Brazil,-8.8344444,-36.471389
+SWPR,Pires do Rio,Pires do Rio,Goiás,Brazil,-17.318889,-48.335278
+SNSS,Salinas,Salinas,Minas Gerais,Brazil,-16.208333,-42.321944
+SJVO,Aragarças,Aragarças,Goiás,Brazil,-15.899444,-52.240833
+SBRF,AEROPORTO INTERNACIONAL RECIFE/GUARARAPES - GILBERTO FREYRE,Recife,Pernambuco,Brazil,-8.1263889,-34.922778
+SJXI,Santa Rita do Sapucaí,Santa Rita do Sapucaí,Minas Gerais,Brazil,-22.272778,-45.64
+SBJF,Francisco de Assis,Juiz de Fora,Minas Gerais,Brazil,-21.793056,-43.385556
+SNTO,Juscelino Kubitscheck,Teófilo Otoni,Minas Gerais,Brazil,-17.890833,-41.515
+SDVE,Vera Cruz,Vera Cruz,São Paulo,Brazil,-22.230278,-49.816944
+SBMI,Maricá,Maricá,Rio de Janeiro,Brazil,-22.918056,-42.828889
+SSOL,Padre Israel (Israel Batista de Carvalho),Lavras,Minas Gerais,Brazil,-21.240556,-44.964167
+SSLG,São Luiz Gonzaga,São Luiz Gonzaga,Rio Grande do Sul,Brazil,-28.376389,-55.0375
+SDRK,Rio Claro,Rio Claro,São Paulo,Brazil,-22.431667,-47.5625
+SNPY,São Sebastião do Paraíso,São Sebastião do Paraíso,Minas Gerais,Brazil,-20.948333,-46.983056
+SNKD,Conceição do Mato Dentro,Conceição do Mato Dentro,Minas Gerais,Brazil,-19.018611,-43.435278
+SDNM,Brigadeiro Eduardo Gomes,Nova Mutum,Mato Grosso,Brazil,-13.821111,-56.038611
+SDVG,Domingos Pignatari,Votuporanga,São Paulo,Brazil,-20.457222,-50.0025
+SSOI,Pederneiras,Pederneiras,São Paulo,Brazil,-22.307222,-48.773056
+SNRZ,Oliveira,Oliveira,Minas Gerais,Brazil,-20.714444,-44.865278
+SBBU,Bauru,Bauru,São Paulo,Brazil,-22.345,-49.053889
+SDUN,Itaperuna,Itaperuna,Rio de Janeiro,Brazil,-21.219167,-41.875833
+SNBC,Barra do Corda,Barra do Corda,Maranhão,Brazil,-5.5025,-45.216111
+SDPN,Penápolis,Penápolis,São Paulo,Brazil,-21.41,-50.033611
+SNUB,Ubá,Ubá,Minas Gerais,Brazil,-21.12,-42.883611
+SNOE,Oeiras,Oeiras,Piauí,Brazil,-7.0183333,-42.167222
+SBKP,Viracopos,Campinas,São Paulo,Brazil,-23.006944,-47.134444
+SDFD,Coronel Aviador Carlos Orleans Guimarães,Fernandópolis,São Paulo,Brazil,-20.276667,-50.213889
+SNFE,Comandante Paschoal Patrocínio Filho,Alfenas,Minas Gerais,Brazil,-21.431389,-45.932222
+SBPG,Comandante Antônio Amilton Beraldo,Ponta Grossa,Paraná,Brazil,-25.184444,-50.143889
+SWGI,Gurupi,Gurupi,Tocantins,Brazil,-11.739444,-49.133333
+SIZX,Juara Sul,Juara,Mato Grosso,Brazil,-11.296667,-57.548889
+SNJB,Jacobina,Jacobina,Bahia,Brazil,-11.163056,-40.553333
+SNJP,João Pinheiro,João Pinheiro,Minas Gerais,Brazil,-17.7875,-46.120278
+SBTU,Tucuruí,Tucuruí,Pará,Brazil,-3.7769444,-49.719722
+SWMW,Maués,Maués,Amazonas,Brazil,-3.3719444,-57.724722
+SDBK,Tancredo de Almeida Neves,Botucatu,São Paulo,Brazil,-22.937778,-48.468056
+SN3Y,Novo Aeroporto de Bom Jesus da Lapa,Bom Jesus da Lapa,Bahia,Brazil,-13.2725,-43.314722
+SSMT,Mostardas,Mostardas,Rio Grande do Sul,Brazil,-31.101111,-50.908056
+SBBP,Estadual Arthur Siqueira,Bragança Paulista,São Paulo,Brazil,-22.978889,-46.537222
+SSKW,Cacoal,Cacoal,Rondônia,Brazil,-11.495556,-61.450833
+SBUR,Mario de Almeida Franco,Uberaba,Minas Gerais,Brazil,-19.764722,-47.966111
+SBMG,SÍLVIO NAME JÚNIOR,Maringá,Paraná,Brazil,-23.476389,-52.017778
+SWHP,Frederico Carlos Müller,Água Boa,Mato Grosso,Brazil,-14.019722,-52.151944
+SSKZ,Carazinho,Carazinho,Rio Grande do Sul,Brazil,-28.321667,-52.816667
+SNMH,Pirenópolis,Pirenópolis,Goiás,Brazil,-15.848611,-48.982778
+SDDR,Dracena,Dracena,São Paulo,Brazil,-21.460556,-51.606944
+SBPV,Governador Jorge Teixeira de Oliveira,Porto Velho,Rondônia,Brazil,-8.7136111,-63.902778
+SNQU,Mucugê,Mucugê,Bahia,Brazil,-13.031667,-41.444444
+SNYB,Tito Teixeira,Ituiutaba,Minas Gerais,Brazil,-19.001389,-49.487222
+SSQP,Monte Santo,Monte Santo,Bahia,Brazil,-10.465278,-39.286111
+SSCL,Cassilândia,Cassilândia,Mato Grosso do Sul,Brazil,-19.146944,-51.676389
+SBAQ,Bartolomeu de Gusmão,Araraquara,São Paulo,Brazil,-21.811944,-48.133056
+SSPS,Dimorvan Carraro,Palmas,Paraná,Brazil,-26.472222,-51.975556
+SSCR,Ruben Berta,Marechal Cândido Rondon,Paraná,Brazil,-24.512778,-54.054722
+SBSJ,PROFESSOR URBANO ERNESTO STUMPF,São José dos Campos,São Paulo,Brazil,-23.228889,-45.871111
+SBCP,Bartolomeu Lisandro,Campos dos Goytacazes,Rio de Janeiro,Brazil,-21.701111,-41.307778
+SIBW,Conceição,Conceição,Paraíba,Brazil,-7.5625,-38.4975
+SWVC,Vila Rica,Vila Rica,Mato Grosso,Brazil,-9.9811111,-51.140556
+SSFL,João Pereira dos Santos Filho,Fronteiras,Piauí,Brazil,-7.1,-40.628333
+SWDN,Dianópolis,Dianópolis,Tocantins,Brazil,-11.595278,-46.847778
+SNPU,COMANDANTE VIRGILIO BORIM,Paraguaçu,Minas Gerais,Brazil,-21.561389,-45.754722
+SNAG,Araguari,Araguari,Minas Gerais,Brazil,-18.668056,-48.190278
+SWHT,Humaitá,Humaitá,Amazonas,Brazil,-7.5347222,-63.072222
+SDJC,Jaboticabal,Jaboticabal,São Paulo,Brazil,-21.230833,-48.285556
+SDPY,Pirassununga,Pirassununga,São Paulo,Brazil,-22.027778,-47.421667
+SDTI,Tupi Paulista,Tupi Paulista,São Paulo,Brazil,-21.393056,-51.598889
+SDKJ,Formosa do Rio Preto,Formosa do Rio Preto,Bahia,Brazil,-11.021111,-45.187222
+SIMK,Tenente Lund Pressoto,Franca,São Paulo,Brazil,-20.590278,-47.3825
+SSAB,Moisés Lupion,Ibaiti,Paraná,Brazil,-23.762778,-50.263056
+SJ4Y,Morrinhos,Morrinhos,Goiás,Brazil,-17.761667,-49.121667
+SDBY,Bariri,Bariri,São Paulo,Brazil,-22.069167,-48.706389
+SNCA,Campo Belo,Campo Belo,Minas Gerais,Brazil,-20.8925,-45.335556
+SNRU,Caruaru,Caruaru,Pernambuco,Brazil,-8.2844444,-36.010833
+SDGC,Garça,Garça,São Paulo,Brazil,-22.183611,-49.656111
+SBUA,São Gabriel da Cachoeira,São Gabriel da Cachoeira,Amazonas,Brazil,-0.14805556,-66.985833
+SNCX,Colatina,Colatina,Espírito Santo,Brazil,-19.4875,-40.579444
+SSGB,Municipal de Guaratuba,Guaratuba,Paraná,Brazil,-25.880556,-48.612222
+SBPS,Porto Seguro,Porto Seguro,Bahia,Brazil,-16.438056,-39.077778
+SBSL,MARECHAL CUNHA MACHADO,São Luís,Maranhão,Brazil,-2.5869444,-44.236111
+SDRR,Avaré-Arandu,Avaré,São Paulo,Brazil,-23.092222,-48.987222
+SBCN,Nelson Rodrigues Guimarães,Caldas Novas,Goiás,Brazil,-17.725,-48.606389
+SBMQ,Alberto Alcolumbre,Macapá,Amapá,Brazil,0.050555556,-51.072222
+SBPK,Aeroporto Internacional de Pelotas/RS - João Simões Lopes Neto,Pelotas,Rio Grande do Sul,Brazil,-31.716111,-52.331111
+SWTP,SANTA ISABEL DO RIO NEGRO,Santa Isabel do Rio Negro,Amazonas,Brazil,-0.37861111,-64.993056
+SSMR,Manoel Ribas,Manoel Ribas,Paraná,Brazil,-24.529444,-51.651667
+SBTT,Tabatinga,Tabatinga,Amazonas,Brazil,-4.2505556,-69.937778
+SNLN,Municipal de Linhares,Linhares,Espírito Santo,Brazil,-19.355278,-40.071389
+SSNQ,Nioaque,Nioaque,Mato Grosso do Sul,Brazil,-21.184444,-55.831111
+SSFB,Paulo Abdala,Francisco Beltrão,Paraná,Brazil,-26.058889,-53.063333
+SSPG,Santos Dumont,Paranaguá,Paraná,Brazil,-25.540278,-48.531111
+SBPP,Ponta Porã,Ponta Porã,Mato Grosso do Sul,Brazil,-22.549722,-55.703056
+SSUV,José Cleto,União da Vitória,Paraná,Brazil,-26.231944,-51.0675
+SNUH,Piumhi,Piumhi,Minas Gerais,Brazil,-20.438889,-45.992222
+SNCZ,Ponte Nova,Ponte Nova,Minas Gerais,Brazil,-20.403056,-42.916667
+SNBS,Balsas,Balsas,Maranhão,Brazil,-7.5252778,-46.053333
+SNKI,AERÓDROMO DE CACHOEIRO DE ITAPEMIRIM,Cachoeiro de Itapemirim,Espírito Santo,Brazil,-20.835278,-41.186389
+SNEB,Nagib Demachki,Paragominas,Pará,Brazil,-3.0197222,-47.316389
+SSTE,Torres,Torres,Rio Grande do Sul,Brazil,-29.415,-49.81
+SDAD,Everaldo Moraes Barreto,Adamantina,São Paulo,Brazil,-21.696111,-51.096389
+SWNK,Novo Campo,Boca do Acre,Amazonas,Brazil,-8.8347222,-67.3125
+SSKK,Capão da Canoa,Capão da Canoa,Rio Grande do Sul,Brazil,-29.763611,-50.036944
+SWBE,Walfrido Salmito de Almeida,São Benedito,Ceará,Brazil,-4.0427778,-40.893889
+SNVI,Mello Viana,Três Corações,Minas Gerais,Brazil,-21.789167,-45.268056
+SWXV,Xavantina,Nova Xavantina,Mato Grosso,Brazil,-14.690833,-52.349167
+SSUM,Orlando de Carvalho,Umuarama,Paraná,Brazil,-23.799167,-53.313889
+SSBL,Blumenau,Blumenau,Santa Catarina,Brazil,-26.831667,-49.093611
+SBBV,Atlas Brasil Cantanhede,Boa Vista,Roraima,Brazil,2.84138889,-60.692222
+SWII,Ipiranga,Santo Antônio do Içá,Amazonas,Brazil,-2.9402778,-69.694167
+SNBX,Barra,Barra,Bahia,Brazil,-11.081111,-43.1475
+SWCZ,Ceres,Ceres,Goiás,Brazil,-15.343889,-49.604444
+SSQC,Siqueira Campos,Siqueira Campos,Paraná,Brazil,-23.674722,-49.815556
+SBAC,Aeroporto Regional de Canoa Quebrada Dragão do Mar,Aracati,Ceará,Brazil,-4.5686111,-37.804722
+SBBI,Bacacheri,Curitiba,Paraná,Brazil,-25.403333,-49.233611
+SNBR,Dom Ricardo Weberberger,Barreiras,Bahia,Brazil,-12.079167,-45.009444
+SDAA,Araras,Araras,São Paulo,Brazil,-22.336944,-47.358333
+SBUF,Paulo Afonso,Paulo Afonso,Bahia,Brazil,-9.4011111,-38.251111
+SNBA,Chafei Amsei,Barretos,São Paulo,Brazil,-20.585556,-48.595833
+SDUQ,Paraguaçu Paulista,Paraguaçu Paulista,São Paulo,Brazil,-22.426944,-50.606944
+SDKK,Mococa,Mococa,São Paulo,Brazil,-21.487222,-47.033889
+SWFX,São Félix do Araguaia,São Félix do Araguaia,Mato Grosso,Brazil,-11.6325,-50.689444
+SNIE,Caetité,Caetité,Bahia,Brazil,-14.012222,-42.493889
+SNBG,Baixo Guandu - Aimorés,Baixo Guandu,Espírito Santo,Brazil,-19.498889,-41.041944
+SBCZ,Cruzeiro do Sul,Cruzeiro do Sul,Acre,Brazil,-7.5994444,-72.769444
+SBNF,Ministro Victor Konder,Navegantes,Santa Catarina,Brazil,-26.878611,-48.650833
+SNQX,Quixadá,Quixadá,Ceará,Brazil,-4.9788889,-38.987778
+SNTS,BRIGADEIRO FIRMINO AYRES,Patos,Paraíba,Brazil,-7.0377778,-37.2575
+SDJV,Municipal de São João da Boa Vista,São João da Boa Vista,São Paulo,Brazil,-22.016667,-46.840556
+SSAN,João Galdino,Andirá,Paraná,Brazil,-23.027222,-50.226944
+SSAP,Capitão João Busse,Apucarana,Paraná,Brazil,-23.612222,-51.385
+SBJH,São Paulo Catarina Aeroporto Executivo,São Roque,São Paulo,Brazil,-23.426944,-47.165833
+SBFI,Cataratas,Foz do Iguaçu,Paraná,Brazil,-25.600278,-54.485
+SDAI,Americana,Americana,São Paulo,Brazil,-22.755278,-47.268056
+SSSZ,Sertanópolis,Sertanópolis,Paraná,Brazil,-23.061944,-51.013889
+SNAS,Três Marias,Três Marias,Minas Gerais,Brazil,-18.225,-45.190556
+SBMA,João Corrêa da Rocha,Marabá,Pará,Brazil,-5.3680556,-49.138056
+SSRG,Aeroporto Estadual de Registro,Registro,São Paulo,Brazil,-24.531667,-47.840278
+SBOI,Oiapoque,Oiapoque,Amapá,Brazil,3.85416667,-51.797222
+SWUA,São Miguel do Araguaia,São Miguel do Araguaia,Goiás,Brazil,-13.333889,-50.205833
+SDET,Tietê,Tietê,São Paulo,Brazil,-23.104722,-47.724444
+SBUG,Rubem Berta,Uruguaiana,Rio Grande do Sul,Brazil,-29.783333,-57.036944
+SBVG,Major Brigadeiro Trompowsky,Varginha,Minas Gerais,Brazil,-21.588889,-45.473333
+SBJI,Ji-Paraná,Ji-Paraná,Rondônia,Brazil,-10.870556,-61.846667
+SSKS,Brigadeiro Nero Moura,Cachoeira do Sul,Rio Grande do Sul,Brazil,-30.002222,-52.940278
+SWUD,Deputado Oswaldo Tolentino,Cláudio,Minas Gerais,Brazil,-20.445833,-44.813056
+SNQD,Sousa,Sousa,Paraíba,Brazil,-6.7855556,-38.233889
+SWTY,Taguatinga,Taguatinga,Tocantins,Brazil,-12.435,-46.400278
+SBTF,Prefeito Orlando Marinho,Tefé,Amazonas,Brazil,-3.3802778,-64.725278
+SWBC,Barcelos,Barcelos,Amazonas,Brazil,-0.98111111,-62.919444
+SNGB,Gilbués,Gilbués,Piauí,Brazil,-9.8336111,-45.367222
+SBRJ,Santos Dumont,Rio de Janeiro,Rio de Janeiro,Brazil,-22.91,-43.1625
+SSCN,Canela,Canela,Rio Grande do Sul,Brazil,-29.370556,-50.832222
+SSIE,Teruel Ipanema Estância,Campo Grande,Mato Grosso do Sul,Brazil,-20.603889,-54.595278
+SBLO,Governador José Richa,Londrina,Paraná,Brazil,-23.330278,-51.136667
+SBDB,Aeródromo Público de Bonito,Bonito,Mato Grosso do Sul,Brazil,-21.247222,-56.4525
+SSCT,Engenheiro Gastão de Mesquita Filho,Cianorte,Paraná,Brazil,-23.691667,-52.642222
+SDBB,Bebedouro,Bebedouro,São Paulo,Brazil,-20.900278,-48.473611
+SILC,AEROPORTO MUNICIPAL BOM FUTURO,Lucas do Rio Verde,Mato Grosso,Brazil,-13.037778,-55.950278
+SWWU,Uruaçu,Uruaçu,Goiás,Brazil,-14.544722,-49.091111
+SDCG,Senadora Eunice Michiles,São Paulo de Olivença,Amazonas,Brazil,-3.4691667,-68.921111
+SNBM,Cristiano Ferreira Varella,Muriaé,Minas Gerais,Brazil,-21.128889,-42.366944
+SBVH,Vilhena,Vilhena,Rondônia,Brazil,-12.694444,-60.098333
+SNIG,Iguatu,Iguatu,Ceará,Brazil,-6.3466667,-39.294444
+SBCJ,Carajás,Parauapebas,Pará,Brazil,-6.1177778,-50.003333
+SWPI,Parintins,Parintins,Amazonas,Brazil,-2.6736111,-56.7775
+SNCP,Aeroporto Regional do Planalto Serrano,Correia Pinto,Santa Catarina,Brazil,-27.634167,-50.358333
+SNVB,Valença,Valença,Bahia,Brazil,-13.296389,-38.9925
+SNXB,Caxambu,Caxambu,Minas Gerais,Brazil,-21.9175,-44.969444
+SNGX,Guaxupé,Guaxupé,Minas Gerais,Brazil,-21.326667,-46.730278
+SWJN,Juína,Juína,Mato Grosso,Brazil,-11.419444,-58.71
+SSHZ,Walter Bündchen,Horizontina,Rio Grande do Sul,Brazil,-27.638333,-54.338889
+SSGW,Manoel Ribas,Goioerê,Paraná,Brazil,-24.219722,-53.043889
+SWPK,Poconé,Poconé,Mato Grosso,Brazil,-16.271667,-56.651111
+SBJP,Presidente Castro Pinto,João Pessoa,Paraíba,Brazil,-7.1483333,-34.950278
+SDCO,Sorocaba,Sorocaba,São Paulo,Brazil,-23.477778,-47.49
+SNKN,Currais Novos,Currais Novos,Rio Grande do Norte,Brazil,-6.2808333,-36.540278
+SIBZ,Itaporanga,Itaporanga,Paraíba,Brazil,-7.3111111,-38.113611
+SNPX,Pirapora,Pirapora,Minas Gerais,Brazil,-17.313889,-44.858611
+SSRZ,Dário Brasil Capoano de Oliveira,Rosário do Sul,Rio Grande do Sul,Brazil,-30.2775,-54.925278
+SIBY,Lourival Nunes de Farias,Monteiro,Paraíba,Brazil,-7.8783333,-37.136667
+SDSC,Mário Pereira Lopes,São Carlos,São Paulo,Brazil,-21.876389,-47.903333
+SJTS,Terra Santa,Terra Santa,Pará,Brazil,-2.0727778,-56.488889
+SSST,Santiago,Santiago,Rio Grande do Sul,Brazil,-29.215,-54.841667
+SNEE,Vacaria Novo,Vacaria,Rio Grande do Sul,Brazil,-28.431944,-51.022778
+SWEK,Canarana,Canarana,Mato Grosso,Brazil,-13.5775,-52.268056
+SBPO,AEROPORTO REGIONAL DE PATO BRANCO - PROFESSOR JUVENAL LOUREIRO CARDOSO,Pato Branco,Paraná,Brazil,-26.217222,-52.694444
+SNZR,Pedro Rabelo de Souza,Paracatu,Minas Gerais,Brazil,-17.242778,-46.883056
+SNUN,Unaí,Unaí,Minas Gerais,Brazil,-16.353889,-46.926944
+SDMO,Monte Alto,Monte Alto,São Paulo,Brazil,-21.258056,-48.524167
+SBEG,Eduardo Gomes,Manaus,Amazonas,Brazil,-3.0411111,-60.050556
+SSSS,São Francisco do Sul,São Francisco do Sul,Santa Catarina,Brazil,-26.221111,-48.564444
+SSEZ,Espumoso,Espumoso,Rio Grande do Sul,Brazil,-28.738056,-52.855556
+SWCB,Campos Belos,Campos Belos,Goiás,Brazil,-13.006944,-46.710833
+SBCI,Brigadeiro Lysias Augusto Rodrigues,Carolina,Maranhão,Brazil,-7.3205556,-47.458611
+SNCS,Campos Sales,Campos Sales,Ceará,Brazil,-7.0516667,-40.358333
+SNJQ,Jequitinhonha,Jequitinhonha,Minas Gerais,Brazil,-16.441389,-41.037222
+SBBG,Comandante Gustavo Kraemer,Bagé,Rio Grande do Sul,Brazil,-31.390833,-54.109722
+SDXJ,Costa Rica,Costa Rica,Mato Grosso do Sul,Brazil,-18.491389,-53.168333
+SNTF,Teixeira de Freitas,Teixeira de Freitas,Bahia,Brazil,-17.524444,-39.668333
+SWPY,Primavera do Leste,Primavera do Leste,Mato Grosso,Brazil,-15.5625,-54.330556
+SSNG,HELIO ALVES DE OLIVEIRA,Montenegro,Rio Grande do Sul,Brazil,-29.719722,-51.488889
+SBAX,Romeu Zema,Araxá,Minas Gerais,Brazil,-19.563056,-46.960556
+SJQN,Quirinópolis,Quirinópolis,Goiás,Brazil,-18.446111,-50.409167
+SBIZ,Prefeito Renato Moreira,Imperatriz,Maranhão,Brazil,-5.5305556,-47.458333
+SNOF,Ouro Fino,Ouro Fino,Minas Gerais,Brazil,-22.297222,-46.3925
+SBMY,Manicoré,Manicoré,Amazonas,Brazil,-5.8111111,-61.278333
+SBPA,Salgado Filho,Porto Alegre,Rio Grande do Sul,Brazil,-29.994722,-51.171111
+SDPW,Pedro Morganti,Piracicaba,São Paulo,Brazil,-22.711944,-47.618056
+SNMX,São Mateus,São Mateus,Espírito Santo,Brazil,-18.721389,-39.833611
+SSWS,Caçapava do Sul,Caçapava do Sul,Rio Grande do Sul,Brazil,-30.549722,-53.458056
+SSPN,Paranaíba,Paranaíba,Mato Grosso do Sul,Brazil,-19.651111,-51.199444
+SBTG,Três Lagoas,Três Lagoas,Mato Grosso do Sul,Brazil,-20.751389,-51.680278
+SBAR,Santa Maria,Aracaju,Sergipe,Brazil,-10.985278,-37.073333
+SBAA,Conceição do Araguaia,Conceição do Araguaia,Pará,Brazil,-8.3486111,-49.303056
+SDH2,Porto Alegre do Norte,Porto Alegre do Norte,Mato Grosso,Brazil,-10.918056,-51.608889
+SNAP,Janaúba,Janaúba,Minas Gerais,Brazil,-15.731944,-43.323056
+SNDC,Redenção,Redenção,Pará,Brazil,-8.0311111,-49.979722
+SNMZ,Porto de Moz,Porto de Moz,Pará,Brazil,-1.7413889,-52.235833
+SSBN,Belém Novo,Porto Alegre,Rio Grande do Sul,Brazil,-30.189167,-51.1825
+SWNH,Aruanã,Aruanã,Goiás,Brazil,-14.933056,-51.048333
+SNXQ,Xique-Xique,Xique-Xique,Bahia,Brazil,-10.834167,-42.683333
+SSAK,Carlos Ruhl,Cruz Alta,Rio Grande do Sul,Brazil,-28.658611,-53.611389
+SSCK,Olavo Cecco Rigon,Concórdia,Santa Catarina,Brazil,-27.180556,-52.051111
+SWFN,Flores,Manaus,Amazonas,Brazil,-3.0727778,-60.021111
+SNFX,São Félix do Xingu,São Félix do Xingu,Pará,Brazil,-6.6413889,-51.952222
+SBJR,Jacarepaguá - Roberto Marinho,Rio de Janeiro,Rio de Janeiro,Brazil,-22.9875,-43.37
+SNPA,Pará de Minas,Pará de Minas,Minas Gerais,Brazil,-19.8425,-44.600833
+SBTB,Trombetas,Oriximiná,Pará,Brazil,-1.4897222,-56.396944
+SSAQ,Aeroclube de Passo Fundo,Passo Fundo,Rio Grande do Sul,Brazil,-28.250556,-52.516667
+SWLB,Lábrea,Lábrea,Amazonas,Brazil,-7.2788889,-64.769444
+SSPL,Palmeira das Missões,Palmeira das Missões,Rio Grande do Sul,Brazil,-27.901667,-53.33
+SNWC,Camocim,Camocim,Ceará,Brazil,-2.8958333,-40.858889
+SBCY,Marechal Rondon,Cuiabá,Mato Grosso,Brazil,-15.65,-56.1175
+SNRD,Prado,Prado,Bahia,Brazil,-17.296944,-39.271944
+SNIO,Cipó,Cipó,Bahia,Brazil,-11.125278,-38.486944
+SSOS,Osório,Osório,Rio Grande do Sul,Brazil,-29.902222,-50.249167
+SBGR,Guarulhos - Governador André Franco Montoro,Guarulhos,São Paulo,Brazil,-23.435556,-46.473056
+SBMT,Campo de Marte,São Paulo,São Paulo,Brazil,-23.509167,-46.6375
+SNED,Sócrates Rezende,Canavieiras,Bahia,Brazil,-15.666389,-38.955278
+SWNS,Anápolis,Anápolis,Goiás,Brazil,-16.3625,-48.928056
+SSJA,Santa Terezinha,Joaçaba,Santa Catarina,Brazil,-27.171389,-51.553333
+SDK7,Nova Andradina,Nova Andradina,Mato Grosso do Sul,Brazil,-22.1625,-53.330278
+SSIM,Forquilhinha-Criciúma,Forquilhinha,Santa Catarina,Brazil,-28.725833,-49.424722
+SBBH,Pampulha - Carlos Drummond de Andrade,Belo Horizonte,Minas Gerais,Brazil,-19.851944,-43.950556
+SNMN,Minas Novas,Minas Novas,Minas Gerais,Brazil,-17.263889,-42.539167
+SDOU,Jornalista Benedito Pimentel,Ourinhos,São Paulo,Brazil,-22.973611,-49.911389
+SJGU,Araguatins,Araguatins,Tocantins,Brazil,-5.6858333,-48.114167
+SNYA,Aeródromo Público de Almeirim,Almeirim,Pará,Brazil,-1.4791667,-52.578056
+SN6L,Dr. Luciano de Arruda Coelho,Sobral,Ceará,Brazil,-3.6147222,-40.232222
+SJAU,Araguacema,Araguacema,Tocantins,Brazil,-8.8377778,-49.557778
+SDIM,Dr. Antonio Ribeiro Nogueira Júnior,Itanhaém,São Paulo,Brazil,-24.164722,-46.785556
+SWCQ,Costa Marques,Costa Marques,Rondônia,Brazil,-12.421667,-64.251667
+SWUZ,Brigadeiro Araripe Macedo,Luziânia,Goiás,Brazil,-16.261667,-47.968611
+SNAL,Arapiraca,Arapiraca,Alagoas,Brazil,-9.7763889,-36.630556
+SNIC,Irecê,Irecê,Bahia,Brazil,-11.34,-41.846944
+SBLJ,Lages,Lages,Santa Catarina,Brazil,-27.782222,-50.281667
+SDOV,Mozarlândia,Mozarlândia,Goiás,Brazil,-14.768889,-50.565
+SDUB,Estadual Gastão Madeira,Ubatuba,São Paulo,Brazil,-23.441389,-45.076111
+SBFL,Hercílio Luz,Florianópolis,Santa Catarina,Brazil,-27.670278,-48.5525
+SNPD,Patos de Minas,Patos de Minas,Minas Gerais,Brazil,-18.672222,-46.491389
+SBMD,Monte Dourado,Almeirim,Pará,Brazil,-0.88972222,-52.602222
+SBME,Macaé,Macaé,Rio de Janeiro,Brazil,-22.342778,-41.763889
+SDLL,Yolanda Penteado,Leme,São Paulo,Brazil,-22.225833,-47.380833
+SBTD,Luiz Dalcanale Filho,Toledo,Paraná,Brazil,-24.685278,-53.696389
+SBJE,Comandante Ariston Pessoa,Cruz,Ceará,Brazil,-2.9066667,-40.358056
+SBRD,Rondonópolis - Maestro Marinho Franco,Rondonópolis,Mato Grosso,Brazil,-16.588056,-54.721667
+SNTI,Óbidos,Óbidos,Pará,Brazil,-1.8680556,-55.514444
+SI68,Gelindo Stefanuto,Campo Novo do Parecis,Mato Grosso,Brazil,-13.731389,-57.891667
+SSPT,Brasílio Marques,Palotina,Paraná,Brazil,-24.343333,-53.828611
+SBRP,Leite Lopes,Ribeirão Preto,São Paulo,Brazil,-21.136389,-47.776667
+SNLI,Abaeté,Abaeté,Minas Gerais,Brazil,-19.155833,-45.495
+SNVC,Viçosa,Viçosa,Minas Gerais,Brazil,-20.745,-42.841389
+SSER,Erechim,Erechim,Rio Grande do Sul,Brazil,-27.663333,-52.271944
+SNAB,Araripina,Araripina,Pernambuco,Brazil,-7.5863889,-40.535278
+SNQG,Cangapara,Floriano,Piauí,Brazil,-6.8461111,-43.078056
+SDIV,Ituverava,Ituverava,São Paulo,Brazil,-20.375278,-47.768611
+SBHT,Altamira,Altamira,Pará,Brazil,-3.2508333,-52.252222
+SBMS,Dix-Sept Rosado,Mossoró,Rio Grande do Norte,Brazil,-5.1958333,-37.361667
+SBJA,Regional Sul,Jaguaruna,Santa Catarina,Brazil,-28.675278,-49.059444
+SWKQ,Serra da Capivara/São Raimundo Nonato,São Raimundo Nonato,Piauí,Brazil,-9.0833333,-42.644722
+SNRP,Rio Paranaíba,Rio Paranaíba,Minas Gerais,Brazil,-19.2125,-46.240556
+SNVD,Santa Maria da Vitória,Santa Maria da Vitória,Bahia,Brazil,-13.404722,-44.223056
+SBJD,Comandante Rolim Adolfo Amaro,Jundiaí,São Paulo,Brazil,-23.181667,-46.943611
+SBKG,Presidente João Suassuna,Campina Grande,Paraíba,Brazil,-7.2691667,-35.895
+SNFO,Formiga,Formiga,Minas Gerais,Brazil,-20.394722,-45.483056
+SNIP,Itapetinga,Itapetinga,Bahia,Brazil,-15.244444,-40.277222
+SSIR,Ibirubá,Ibirubá,Rio Grande do Sul,Brazil,-28.604167,-53.078611
+SBSV,DEPUTADO LUÍS EDUARDO MAGALHÃES,Salvador,Bahia,Brazil,-12.908611,-38.3225
+SBSR,Professor Eriberto Manoel Reino,São José do Rio Preto,São Paulo,Brazil,-20.817222,-49.406944
+SSLT,Gaudêncio Machado Ramos,Alegrete,Rio Grande do Sul,Brazil,-29.8125,-55.893333
+SNZA,Pouso Alegre,Pouso Alegre,Minas Gerais,Brazil,-22.288889,-45.919444
+SNUI,Araçuaí,Araçuaí,Minas Gerais,Brazil,-16.851944,-42.046111
+SSJI,Jardim,Jardim,Mato Grosso do Sul,Brazil,-21.492778,-56.1525
+SWXQ,Lins,Lins,São Paulo,Brazil,-21.662778,-49.731111
+SBML,Frank Miloye Milenkovich,Marília,São Paulo,Brazil,-22.196944,-49.926389
+SBPL,Aeroporto Internacional Senador Nilo Coelho,Petrolina,Pernambuco,Brazil,-9.3675,-40.563611
+SNGI,Aeródromo de Guanambi,Guanambi,Bahia,Brazil,-14.208056,-42.746111
+SNAR,Cirilo Queiróz,Almenara,Minas Gerais,Brazil,-16.165833,-40.684167
+SSOE,Hélio Wasum,São Miguel do Oeste,Santa Catarina,Brazil,-26.781111,-53.503333
+SBZM,Presidente Itamar Franco,Goianá,Minas Gerais,Brazil,-21.513056,-43.173056
+SSRE,Realeza,Realeza,Paraná,Brazil,-25.801111,-53.513056
+SNJM,Regional de Santo Amaro de Minas,Manhuaçu,Minas Gerais,Brazil,-20.259722,-42.183889
+SSQT,Castro,Castro,Paraná,Brazil,-24.8075,-49.959444
+SBAT,PILOTO OSVALDO MARQUES DIAS,Alta Floresta,Mato Grosso,Brazil,-9.8663889,-56.105
+SDXF,Alto Paraíso de Goiás,Alto Paraíso de Goiás,Goiás,Brazil,-14.119167,-47.530278
+SBCG,CAMPO GRANDE,Campo Grande,Mato Grosso do Sul,Brazil,-20.469444,-54.670278
+SBFZ,Pinto Martins,Fortaleza,Ceará,Brazil,-3.7758333,-38.532222
+SWNQ,Niquelândia,Niquelândia,Goiás,Brazil,-14.436389,-48.491944
+SNFU,Frutal,Frutal,Minas Gerais,Brazil,-20.004722,-48.958889
+SSSG,São Gabriel,São Gabriel,Rio Grande do Sul,Brazil,-30.345,-54.267778
+SNMR,Maraú,Maraú,Bahia,Brazil,-14.143333,-39.006667
+SDLY,Armando Natali,Matão,São Paulo,Brazil,-21.624167,-48.350833
+SBEK,Jacareacanga,Jacareacanga,Pará,Brazil,-6.2352778,-57.775833
+SBMK,Mário Ribeiro,Montes Claros,Minas Gerais,Brazil,-16.706111,-43.821944
+SSZR,Luis Alberto Lehr,Santa Rosa,Rio Grande do Sul,Brazil,-27.908889,-54.522222
+SNOS,Municipal José Figueiredo,Passos,Minas Gerais,Brazil,-20.731944,-46.661944
+SSVN,Veranópolis,Veranópolis,Rio Grande do Sul,Brazil,-28.935556,-51.567778
+SBLE,HORÁCIO DE MATTOS,Lençóis,Bahia,Brazil,-12.482222,-41.276944
+SBCT,Afonso Pena,Curitiba,Paraná,Brazil,-25.531667,-49.176111
+SNIU,Ipiaú,Ipiaú,Bahia,Brazil,-14.173333,-39.684167
+SBSM,Santa Maria,Santa Maria,Rio Grande do Sul,Brazil,-29.710833,-53.692222
+SSBG,Municipal de Bento Gonçalves,,,,-29.1475,-51.540833
+SNSI,Santa Maria do Suaçuí,Santa Maria do Suaçuí,Minas Gerais,,-18.198611,-42.466111
+SBMO,Zumbi dos Palmares,Maceió,Alagoas,,-9.5108333,-35.791667
+SBBE,INTERNACIONAL DE BELÉM/VAL DE CANS/JÚLIO CEZAR RIBEIRO,Belém,Pará,,-1.3847222,-48.478889
+SBPC,Embaixador Walther Moreira Salles,Poços de Caldas,Minas Gerais,,-21.8425,-46.569444
+SDAG,Angra Dos Reis,Angra dos Reis,Rio de Janeiro,,-22.975278,-44.307222
+SWPZ,Ouriçanga de Abreu,Posse,Goiás,,-14.118056,-46.345278
+SWTO,Paraíso do Tocantins,Paraíso do Tocantins,Tocantins,,-10.173889,-48.932778
+SNGG,Bom Jesus do Gurguéia,Bom Jesus,Piauí,,-9.0594444,-44.369167
+SSGG,Aeroporto Regional de Guarapuava - Tancredo Thomás de Faria,Guarapuava,Paraná,,-25.388333,-51.523611
+SNMA,Monte Alegre,Monte Alegre,Pará,,-1.9966667,-54.071389
+SJZA,Pedro Vieira Moreira,Cajazeiras,Paraíba,,-6.8827778,-38.615833
+SDTP,José Vicente Faria Lima,Tupã,São Paulo,,-21.89,-50.505833
+SDMJ,Mogi Mirim,Moji Mirim,São Paulo,,-22.410833,-46.905556
+SBNV,Aeródromo Nacional de Aviação,Goiânia,Goiás,,-16.625556,-49.349444
+SWIQ,Aeroporto Municipal José Caires de Oliveira,Minaçu,Goiás,,-13.549167,-48.195556
+SBCH,Serafin Enoss Bertaso,Chapecó,Santa Catarina,,-27.133889,-52.658889
+SDTB,Atibaia,Atibaia,São Paulo,,-23.128333,-46.574722
+SDEP,Geraldo Moacir Bordon,Presidente Epitácio,São Paulo,,-21.775,-52.143611
+SSOG,Arapongas,Arapongas,Paraná,,-23.352778,-51.491667
+SSNB,Ariosto da Riva,Naviraí,Mato Grosso do Sul,,-23.034167,-54.177778
+SBNM,Santo Ângelo,Santo Ângelo,Rio Grande do Sul,,-28.281667,-54.168333
+SWME,Mineiros,Mineiros,Goiás,,-17.551389,-52.556667
+SWGN,Araguaína,Araguaína,Tocantins,,-7.2283333,-48.240833
+SICB,Pedro Simões Pimenta,Cuité,Paraíba,,-6.4875,-36.14
+SNSM,Salinópolis,Salinópolis,Pará,,-0.69638889,-47.336667
+SBIL,Bahia - Jorge Amado,Ilhéus,Bahia,,-14.815,-39.033333
+SNPQ,Pesqueira,Pesqueira,Pernambuco,,-8.3747222,-36.637778
+SBSP,São Paulo/Congonhas - Deputado Freitas Nobre,São Paulo,São Paulo,,-23.626111,-46.656389
+SWPM,Pimenta Bueno,Pimenta Bueno,Rondônia,,-11.641389,-61.178889
+SNRM,Remanso,Remanso,Bahia,,-9.58,-42.115833
+SBFN,Fernando de Noronha,Fernando de Noronha,Pernambuco,,-3.8547222,-32.428333
+SDAE,São Pedro,São Pedro,São Paulo,,-22.583611,-47.896111
+SSVL,Telêmaco Borba,Telêmaco Borba,Paraná,,-24.316389,-50.652222
+SSJK,Júlio de Castilhos,Júlio de Castilhos,Rio Grande do Sul,,-29.153056,-53.743333
+SSNP,Nova Prata,Nova Prata,Rio Grande do Sul,,-28.8025,-51.604167
+SBCF,Tancredo Neves,Confins,Minas Gerais,,-19.624444,-43.971944
+SSEE,Regional do Vale do Taquari,Estrela,Rio Grande do Sul,,-29.453333,-51.934167
+SWBR,Borba,Borba,Amazonas,,-4.4061111,-59.6025
+SWPG,Porto dos Gaúchos,Porto dos Gaúchos,Mato Grosso,,-11.54,-57.378056
+SBUL,Ten Cel Aviador César Bombonato,Uberlândia,Minas Gerais,,-18.883611,-48.225278
+SNDT,JUSCELINO KUBITSCHEK,Diamantina,Minas Gerais,,-18.232222,-43.650278
+SDDN,Paulino Ribeiro de Andrade,Andradina,São Paulo,,-20.925,-51.381944
+SSCD,Chapadão do Sul,Chapadão do Sul,Mato Grosso do Sul,,-18.839167,-52.488056
+SBCX,Hugo Cantergiani,Caxias do Sul,Rio Grande do Sul,,-29.198056,-51.186667
+SDPD,Pindamonhangaba,Pindamonhangaba,São Paulo,,-22.943889,-45.431944
+SBTC,UNA/COMANDATUBA,Una,Bahia,,-15.353333,-38.997222
+SNKF,Das Bandeirinhas,Conselheiro Lafaiete,Minas Gerais,,-20.738611,-43.7975
+SSRS,Barreirinhas,Barreirinhas,Maranhão,,-2.7566667,-42.803333
+SWWA,Porangatu,Porangatu,Goiás,,-13.404444,-49.157222
+SWKT,Catalão,Catalão,Goiás,,-18.216944,-47.899444
+SWOB,Fonte Boa,Fonte Boa,Amazonas,,-2.5325,-66.083333
