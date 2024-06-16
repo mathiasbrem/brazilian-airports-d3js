@@ -15,99 +15,233 @@
   <div id="vis"></div>
   <script type="text/javascript">
     var spec = {
-  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "description": "An interactive visualization of connections among major U.S. airports in 2008. Based on a U.S. airports example by Mike Bostock.",
-  "layer": [
+  "$schema": "https://vega.github.io/schema/vega/v5.json",
+  "description": "Interactive map of U.S. airport connections in 2008.",
+  "width": 1200,
+  "height": 600,
+  "padding": {"top": 25, "left": 0, "right": 0, "bottom": 0},
+  "autosize": "none",
+
+  "signals": [
     {
-      "mark": {
-        "type": "geoshape",
-        "fill": "#ddd",
-        "stroke": "#fff",
-        "strokeWidth": 1
+      "name": "Escala", "value": 860,
+      "bind": {"input": "range", "min": 500, "max": 3000}
+    },
+    {
+      "name": "X", "value": 1200,
+      "bind": {"input": "range", "min": -500, "max": 1200}
+    },
+    {
+      "name": "Y", "value": 60,
+      "bind": {"input": "range", "min": -300, "max": 700}
+    },
+    {
+      "name": "Formato", "value": "line",
+      "bind": {"input": "radio", "options": ["Linha", "Curva"]}
+    },
+    {
+      "name": "hover",
+      "value": null,
+      "on": [
+        {"events": "@cell:pointerover", "update": "datum"},
+        {"events": "@cell:pointerout", "update": "null"}
+      ]
+    },
+    {
+      "name": "title",
+      "value": "U.S. Airports, 2008",
+      "update": "hover ? hover.name + ' (' + hover.iata + ')' : 'Brazilian Airports, 2023'"
+    },
+    {
+      "name": "cell_stroke",
+      "value": null,
+      "on": [
+        {"events": "dblclick", "update": "cell_stroke ? null : 'brown'"},
+        {"events": "pointerdown!", "update": "cell_stroke"}
+      ]
+    }
+  ],
+
+  "data": [
+    {
+      "name": "states",
+      "url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/br_states.json",
+      "format": {"type": "topojson", "feature": "states"},
+      "transform": [
+        {
+          "type": "geopath",
+          "projection": "projection"
+        }
+      ]
+    },
+    {
+      "name": "traffic",
+      "url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/flights-airport.csv",
+      "format": {"type": "csv", "parse": "auto"},
+      "transform": [
+        {
+          "type": "aggregate",
+          "groupby": ["origin"],
+          "fields": ["count"], "ops": ["sum"], "as": ["flights"]
+        }
+      ]
+    },
+    {
+      "name": "airports",
+      "url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/airports.csv",
+      "format": {"type": "csv","parse": "auto"
       },
-      "data": {
-        "url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/br_states.json",
-        "format": {"type": "topojson", "feature": "states"}
+      "transform": [
+        {
+          "type": "lookup",
+          "from": "traffic", "key": "origin",
+          "fields": ["iata"], "as": ["traffic"]
+        },
+        {
+          "type": "filter",
+          "expr": "datum.traffic != null"
+        },
+        {
+          "type": "geopoint",
+          "projection": "projection",
+          "fields": ["longitude", "latitude"]
+        },
+        {
+          "type": "filter",
+          "expr": "datum.x != null && datum.y != null"
+        },
+        {
+          "type": "voronoi", "x": "x", "y": "y"
+        },
+        {
+          "type": "collect", "sort": {
+            "field": "traffic.flights",
+            "order": "descending"
+          }
+        }
+      ]
+    },
+    {
+      "name": "routes",
+      "url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/flights-airport.csv",
+      "format": {"type": "csv", "parse": "auto"},
+      "transform": [
+        {
+          "type": "filter",
+          "expr": "hover && hover.iata == datum.origin"
+        },
+        {
+          "type": "lookup",
+          "from": "airports", "key": "iata",
+          "fields": ["origin", "destination"], "as": ["source", "target"]
+        },
+        {
+          "type": "filter",
+          "expr": "datum.source && datum.target"
+        },
+        {
+          "type": "linkpath",
+          "shape": {"signal": "Formato"}
+        }
+      ]
+    }
+  ],
+
+  "projections": [
+    {
+      "name": "projection",
+      "type": "mercator",
+      "scale": {"signal": "Escala"},
+      "translate": [{"signal": "X"}, {"signal": "Y"}]
+    }
+  ],
+
+  "scales": [
+    {
+      "name": "size",
+      "type": "linear",
+      "domain": {"data": "traffic", "field": "flights"},
+      "range": [16, 1000]
+    }
+  ],
+
+  "marks": [
+    {
+      "type": "path",
+      "from": {"data": "states"},
+      "encode": {
+        "enter": {
+          "fill": {"value": "#dedede"},
+          "stroke": {"value": "white"}
+        },
+        "update": {
+          "path": {"field": "path"}
+        }
       }
     },
     {
-      "mark": {"type": "rule", "color": "#000", "opacity": 0.35},
-      "data": {"url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/flights-airport.csv"},
-      "transform": [
-        {"filter": {"param": "org", "empty": false}},
-        {
-          "lookup": "origin",
-          "from": {
-            "data": {"url": "data/airports.csv"},
-            "key": "iata",
-            "fields": ["latitude", "longitude"]
-          }
+      "type": "symbol",
+      "from": {"data": "airports"},
+      "encode": {
+        "enter": {
+          "size": {"scale": "size", "field": "traffic.flights"},
+          "fill": {"value": "steelblue"},
+          "fillOpacity": {"value": 0.8},
+          "stroke": {"value": "white"},
+          "strokeWidth": {"value": 1.5}
         },
-        {
-          "lookup": "destination",
-          "from": {
-            "data": {"url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/airports.csv"},
-            "key": "iata",
-            "fields": ["latitude", "longitude"]
-          },
-          "as": ["lat2", "lon2"]
+        "update": {
+          "x": {"field": "x"},
+          "y": {"field": "y"}
         }
-      ],
-      "encoding": {
-        "latitude": {"field": "latitude"},
-        "longitude": {"field": "longitude"},
-        "latitude2": {"field": "lat2"},
-        "longitude2": {"field": "lon2"}
       }
     },
     {
-      "mark": {"type": "circle"},
-      "data": {"url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/flights-airport.csv"},
-      "transform": [
-        {"aggregate": [{"op": "count", "as": "routes"}], "groupby": ["origin"]},
-        {
-          "lookup": "origin",
-          "from": {
-            "data": {"url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/airports.csv"},
-            "key": "iata",
-            "fields": ["state", "latitude", "longitude"]
-          }
+      "type": "path",
+      "name": "cell",
+      "from": {"data": "airports"},
+      "encode": {
+        "enter": {
+          "fill": {"value": "transparent"},
+          "strokeWidth": {"value": 0.35}
         },
-        {"filter": "datum.state !== 'PR' && datum.state !== 'VI'"}
-      ],
-      "params": [{
-        "name": "org",
-        "select": {
-          "type": "point",
-          "on": "pointerover",
-          "nearest": true,
-          "fields": ["origin"]
+        "update": {
+          "path": {"field": "path"},
+          "stroke": {"signal": "cell_stroke"}
         }
-      }],
-      "encoding": {
-        "latitude": {"field": "latitude"},
-        "longitude": {"field": "longitude"},
-        "size": {
-          "field": "routes",
-          "type": "quantitative",
-          "scale": {"rangeMax": 1000},
-          "legend": null
+      }
+    },
+    {
+      "type": "path",
+      "interactive": false,
+      "from": {"data": "routes"},
+      "encode": {
+        "enter": {
+          "path": {"field": "path"},
+          "stroke": {"value": "black"},
+          "strokeOpacity": {"value": 0.35}
+        }
+      }
+    },
+    {
+      "type": "text",
+      "interactive": false,
+      "encode": {
+        "enter": {
+          "x": {"value": 895},
+          "y": {"value": 0},
+          "fill": {"value": "black"},
+          "fontSize": {"value": 20},
+          "align": {"value": "right"}
         },
-        "order": {
-          "field": "routes",
-          "sort": "descending"
+        "update": {
+          "text": {"signal": "title"}
         }
       }
     }
-  ],
-  "projection": {"type": "mercator"},
-  "width": 900,
-  "height": 500
-}
-; 
-
-
-    vegaEmbed('#vis', spec).then(function(result) {
+  ]
+};
+   vegaEmbed('#vis', spec).then(function(result) {
       // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
     }).catch(console.error);
   </script>
