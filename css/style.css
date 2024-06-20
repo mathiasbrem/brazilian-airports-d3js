@@ -10,13 +10,8 @@ body {
 
 #sidebar-wrapper {
   min-height: 100vh;
-  width: 250px;
-  margin-left: -250px;
+  width: 300px; /* Aumentei a largura do menu */
   transition: all 0.3s ease-in-out;
-}
-
-#wrapper.toggled #sidebar-wrapper {
-  margin-left: 0;
 }
 
 #page-content-wrapper {
@@ -40,4 +35,28 @@ section {
   border-radius: 5px;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   margin-bottom: 20px;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+}
+
+.card img {
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-text {
+  font-size: 1rem;
+  margin-bottom: 1rem;
 }

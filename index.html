@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Academic Paper Presentation</title>
+  <title>Analise de Dados Aereos do Brasil - Ano 2023</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
@@ -14,47 +14,72 @@
   <div class="d-flex" id="wrapper">
     <!-- Sidebar -->
     <div class="bg-light border-right" id="sidebar-wrapper">
-      <div class="sidebar-heading">Menu</div>
       <div class="list-group list-group-flush">
-        <a href="#section1" class="list-group-item list-group-item-action bg-light">Introduction</a>
-        <a href="#section2" class="list-group-item list-group-item-action bg-light">Analysis 1</a>
-        <a href="#section3" class="list-group-item list-group-item-action bg-light">Analysis 2</a>
-        <a href="#section4" class="list-group-item list-group-item-action bg-light">Conclusion</a>
-        <a href="#authors" class="list-group-item list-group-item-action bg-light">Authors</a>
+        <a href="#section1" class="list-group-item list-group-item-action bg-light">Introdução</a>
+        <a href="#section2" class="list-group-item list-group-item-action bg-light">Gráfico - Rotas Aéreas</a>
+        <a href="#section3" class="list-group-item list-group-item-action bg-light">Análise 2</a>
+        <a href="#section4" class="list-group-item list-group-item-action bg-light">Conclusão</a>
+        <a href="#authors" class="list-group-item list-group-item-action bg-light">Autores</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
     <div id="page-content-wrapper">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
-        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
-      </nav>
-
       <div class="container-fluid">
         <section id="section1" class="my-5">
-          <h1 class="mt-4">Introduction</h1>
-          <p>Welcome to the academic paper presentation. This work presents various analyses and their corresponding visualizations using Vega.</p>
+          <h1 class="mt-4">Introdução</h1>
+          <p>Análise de Dados dos Voos entre Aeroportos Brasileiros para o Ano de 2023</p>
         </section>
         <section id="section2" class="my-5">
-          <h1 class="mt-4">Analysis 1</h1>
-          <h2>Subtitle for Analysis 1</h2>
+          <h1 class="mt-4">Gráfico de Disponibilidade de Rotas Aéreas</h1>
           <div id="vis1" class="my-3"></div>
-          <p>Description of the first analysis and the corresponding graph.</p>
+          <p>Esse gráfico iterativo tem como objetivo representar um gráfico entre os aeroportos públicos brasileiros. A proporção dos nós é calculada conforme a quantidade de rotas entre o aeroporto e suas conexões, portanto, quanto maior o tamanho do nó, maior é a quantidade de destinos.</p>
         </section>
         <section id="section3" class="my-5">
-          <h1 class="mt-4">Analysis 2</h1>
-          <h2>Subtitle for Analysis 2</h2>
+          <h1 class="mt-4">Análise 2</h1>
+          <h2>Subtítulo para a Análise 2</h2>
           <div id="vis2" class="my-3"></div>
-          <p>Description of the second analysis and the corresponding graph.</p>
+          <p>Descrição da segunda análise e do gráfico correspondente.</p>
         </section>
         <section id="section4" class="my-5">
-          <h1 class="mt-4">Conclusion</h1>
-          <p>Summary of the findings and implications of the analyses presented.</p>
+          <h1 class="mt-4">Conclusão</h1>
+          <p>Resumo das conclusões e implicações das análises apresentadas.</p>
         </section>
         <section id="authors" class="my-5">
-          <h1 class="mt-4">Authors</h1>
-          <p>Details about the authors of the paper.</p>
+          <h1 class="mt-4">Autores</h1>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="path/to/author1.jpg" class="card-img-top" alt="Author 1 Photo">
+                <div class="card-body">
+                  <h5 class="card-title">Author 1</h5>
+                  <p class="card-text">Currículo de Author 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                  <a href="https://www.linkedin.com/in/author1" class="btn btn-primary" target="_blank">LinkedIn</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="path/to/author2.jpg" class="card-img-top" alt="Author 2 Photo">
+                <div class="card-body">
+                  <h5 class="card-title">Author 2</h5>
+                  <p class="card-text">Currículo de Author 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                  <a href="https://www.linkedin.com/in/author2" class="btn btn-primary" target="_blank">LinkedIn</a>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 shadow-sm">
+                <img src="path/to/author3.jpg" class="card-img-top" alt="Author 3 Photo">
+                <div class="card-body">
+                  <h5 class="card-title">Author 3</h5>
+                  <p class="card-text">Currículo de Author 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                  <a href="https://www.linkedin.com/in/author3" class="btn btn-primary" target="_blank">LinkedIn</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
       </div>
     </div>
@@ -65,12 +90,6 @@
   <!-- Bootstrap core JavaScript -->
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
   <script>
-    // Menu Toggle Script
-    $("#menu-toggle").click(function(e) {
-      e.preventDefault();
-      $("#wrapper").toggleClass("toggled");
-    });
-
     // Load Vega specifications
     fetch('https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/js/brazilian_airports.json')
       .then(response => response.json())
