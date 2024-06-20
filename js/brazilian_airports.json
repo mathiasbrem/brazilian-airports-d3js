@@ -8,20 +8,20 @@
 
   "signals": [
     {
-      "name": "scale", "value": 860,
+      "name": "Escala", "value": 860,
       "bind": {"input": "range", "min": 500, "max": 3000}
     },
     {
-      "name": "translateX", "value": 1200,
+      "name": "X", "value": 1200,
       "bind": {"input": "range", "min": -500, "max": 1200}
     },
     {
-      "name": "translateY", "value": 60,
+      "name": "Y", "value": 60,
       "bind": {"input": "range", "min": -300, "max": 700}
     },
     {
-      "name": "shape", "value": "line",
-      "bind": {"input": "radio", "options": ["line", "curve"]}
+      "name": "Formato", "value": "line",
+      "bind": {"input": "radio", "options": ["Linha", "Curva"]}
     },
     {
       "name": "hover",
@@ -34,7 +34,7 @@
     {
       "name": "title",
       "value": "U.S. Airports, 2008",
-      "update": "hover ? hover.name + ' (' + hover.iata + ')' : 'U.S. Airports, 2008'"
+      "update": "hover ? hover.name + ' (' + hover.iata + ')' : 'Brazilian Airports, 2023'"
     },
     {
       "name": "cell_stroke",
@@ -60,7 +60,7 @@
     },
     {
       "name": "traffic",
-      "url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/flights-airport.csv",
+      "url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/flights_airports.csv",
       "format": {"type": "csv", "parse": "auto"},
       "transform": [
         {
@@ -125,7 +125,7 @@
         },
         {
           "type": "linkpath",
-          "shape": {"signal": "shape"}
+          "shape": {"signal": "Formato"}
         }
       ]
     }
@@ -135,8 +135,8 @@
     {
       "name": "projection",
       "type": "mercator",
-      "scale": {"signal": "scale"},
-      "translate": [{"signal": "translateX"}, {"signal": "translateY"}]
+      "scale": {"signal": "Escala"},
+      "translate": [{"signal": "X"}, {"signal": "Y"}]
     }
   ],
 

@@ -2,248 +2,89 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Brazil Airports, 2023</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academic Paper Presentation</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-lite@4.0.0-beta.2"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@5"></script>
-  <style>
-    body { font-family: Arial, sans-serif; }
-    #vis { width: 100%; height: 100%; }
-  </style>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body>
-  <div id="vis"></div>
-  <script type="text/javascript">
-    var spec = {
-  "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "description": "Interactive map of U.S. airport connections in 2008.",
-  "width": 1200,
-  "height": 600,
-  "padding": {"top": 25, "left": 0, "right": 0, "bottom": 0},
-  "autosize": "none",
+  <div class="d-flex" id="wrapper">
+    <!-- Sidebar -->
+    <div class="bg-light border-right" id="sidebar-wrapper">
+      <div class="sidebar-heading">Menu</div>
+      <div class="list-group list-group-flush">
+        <a href="#section1" class="list-group-item list-group-item-action bg-light">Introduction</a>
+        <a href="#section2" class="list-group-item list-group-item-action bg-light">Analysis 1</a>
+        <a href="#section3" class="list-group-item list-group-item-action bg-light">Analysis 2</a>
+        <a href="#section4" class="list-group-item list-group-item-action bg-light">Conclusion</a>
+        <a href="#authors" class="list-group-item list-group-item-action bg-light">Authors</a>
+      </div>
+    </div>
+    <!-- /#sidebar-wrapper -->
 
-  "signals": [
-    {
-      "name": "Escala", "value": 860,
-      "bind": {"input": "range", "min": 500, "max": 3000}
-    },
-    {
-      "name": "X", "value": 1200,
-      "bind": {"input": "range", "min": -500, "max": 1200}
-    },
-    {
-      "name": "Y", "value": 60,
-      "bind": {"input": "range", "min": -300, "max": 700}
-    },
-    {
-      "name": "Formato", "value": "line",
-      "bind": {"input": "radio", "options": ["Linha", "Curva"]}
-    },
-    {
-      "name": "hover",
-      "value": null,
-      "on": [
-        {"events": "@cell:pointerover", "update": "datum"},
-        {"events": "@cell:pointerout", "update": "null"}
-      ]
-    },
-    {
-      "name": "title",
-      "value": "U.S. Airports, 2008",
-      "update": "hover ? hover.name + ' (' + hover.iata + ')' : 'Brazilian Airports, 2023'"
-    },
-    {
-      "name": "cell_stroke",
-      "value": null,
-      "on": [
-        {"events": "dblclick", "update": "cell_stroke ? null : 'brown'"},
-        {"events": "pointerdown!", "update": "cell_stroke"}
-      ]
-    }
-  ],
+    <!-- Page Content -->
+    <div id="page-content-wrapper">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+        <button class="btn btn-primary" id="menu-toggle">Toggle Menu</button>
+      </nav>
 
-  "data": [
-    {
-      "name": "states",
-      "url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/br_states.json",
-      "format": {"type": "topojson", "feature": "states"},
-      "transform": [
-        {
-          "type": "geopath",
-          "projection": "projection"
-        }
-      ]
-    },
-    {
-      "name": "traffic",
-      "url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/flights-airport.csv",
-      "format": {"type": "csv", "parse": "auto"},
-      "transform": [
-        {
-          "type": "aggregate",
-          "groupby": ["origin"],
-          "fields": ["count"], "ops": ["sum"], "as": ["flights"]
-        }
-      ]
-    },
-    {
-      "name": "airports",
-      "url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/airports.csv",
-      "format": {"type": "csv","parse": "auto"
-      },
-      "transform": [
-        {
-          "type": "lookup",
-          "from": "traffic", "key": "origin",
-          "fields": ["iata"], "as": ["traffic"]
-        },
-        {
-          "type": "filter",
-          "expr": "datum.traffic != null"
-        },
-        {
-          "type": "geopoint",
-          "projection": "projection",
-          "fields": ["longitude", "latitude"]
-        },
-        {
-          "type": "filter",
-          "expr": "datum.x != null && datum.y != null"
-        },
-        {
-          "type": "voronoi", "x": "x", "y": "y"
-        },
-        {
-          "type": "collect", "sort": {
-            "field": "traffic.flights",
-            "order": "descending"
-          }
-        }
-      ]
-    },
-    {
-      "name": "routes",
-      "url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/flights-airport.csv",
-      "format": {"type": "csv", "parse": "auto"},
-      "transform": [
-        {
-          "type": "filter",
-          "expr": "hover && hover.iata == datum.origin"
-        },
-        {
-          "type": "lookup",
-          "from": "airports", "key": "iata",
-          "fields": ["origin", "destination"], "as": ["source", "target"]
-        },
-        {
-          "type": "filter",
-          "expr": "datum.source && datum.target"
-        },
-        {
-          "type": "linkpath",
-          "shape": {"signal": "Formato"}
-        }
-      ]
-    }
-  ],
+      <div class="container-fluid">
+        <section id="section1" class="my-5">
+          <h1 class="mt-4">Introduction</h1>
+          <p>Welcome to the academic paper presentation. This work presents various analyses and their corresponding visualizations using Vega.</p>
+        </section>
+        <section id="section2" class="my-5">
+          <h1 class="mt-4">Analysis 1</h1>
+          <h2>Subtitle for Analysis 1</h2>
+          <div id="vis1" class="my-3"></div>
+          <p>Description of the first analysis and the corresponding graph.</p>
+        </section>
+        <section id="section3" class="my-5">
+          <h1 class="mt-4">Analysis 2</h1>
+          <h2>Subtitle for Analysis 2</h2>
+          <div id="vis2" class="my-3"></div>
+          <p>Description of the second analysis and the corresponding graph.</p>
+        </section>
+        <section id="section4" class="my-5">
+          <h1 class="mt-4">Conclusion</h1>
+          <p>Summary of the findings and implications of the analyses presented.</p>
+        </section>
+        <section id="authors" class="my-5">
+          <h1 class="mt-4">Authors</h1>
+          <p>Details about the authors of the paper.</p>
+        </section>
+      </div>
+    </div>
+    <!-- /#page-content-wrapper -->
+  </div>
+  <!-- /#wrapper -->
 
-  "projections": [
-    {
-      "name": "projection",
-      "type": "mercator",
-      "scale": {"signal": "Escala"},
-      "translate": [{"signal": "X"}, {"signal": "Y"}]
-    }
-  ],
+  <!-- Bootstrap core JavaScript -->
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Menu Toggle Script
+    $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+    });
 
-  "scales": [
-    {
-      "name": "size",
-      "type": "linear",
-      "domain": {"data": "traffic", "field": "flights"},
-      "range": [16, 1000]
-    }
-  ],
+    // Load Vega specifications
+    fetch('https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/js/brazilian_airports.json')
+      .then(response => response.json())
+      .then(spec => {
+        vegaEmbed('#vis1', spec);
+      })
+      .catch(error => console.error('Error loading Vega spec1:', error));
 
-  "marks": [
-    {
-      "type": "path",
-      "from": {"data": "states"},
-      "encode": {
-        "enter": {
-          "fill": {"value": "#dedede"},
-          "stroke": {"value": "white"}
-        },
-        "update": {
-          "path": {"field": "path"}
-        }
-      }
-    },
-    {
-      "type": "symbol",
-      "from": {"data": "airports"},
-      "encode": {
-        "enter": {
-          "size": {"scale": "size", "field": "traffic.flights"},
-          "fill": {"value": "steelblue"},
-          "fillOpacity": {"value": 0.8},
-          "stroke": {"value": "white"},
-          "strokeWidth": {"value": 1.5}
-        },
-        "update": {
-          "x": {"field": "x"},
-          "y": {"field": "y"}
-        }
-      }
-    },
-    {
-      "type": "path",
-      "name": "cell",
-      "from": {"data": "airports"},
-      "encode": {
-        "enter": {
-          "fill": {"value": "transparent"},
-          "strokeWidth": {"value": 0.35}
-        },
-        "update": {
-          "path": {"field": "path"},
-          "stroke": {"signal": "cell_stroke"}
-        }
-      }
-    },
-    {
-      "type": "path",
-      "interactive": false,
-      "from": {"data": "routes"},
-      "encode": {
-        "enter": {
-          "path": {"field": "path"},
-          "stroke": {"value": "black"},
-          "strokeOpacity": {"value": 0.35}
-        }
-      }
-    },
-    {
-      "type": "text",
-      "interactive": false,
-      "encode": {
-        "enter": {
-          "x": {"value": 895},
-          "y": {"value": 0},
-          "fill": {"value": "black"},
-          "fontSize": {"value": 20},
-          "align": {"value": "right"}
-        },
-        "update": {
-          "text": {"signal": "title"}
-        }
-      }
-    }
-  ]
-};
-   vegaEmbed('#vis', spec).then(function(result) {
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
+    fetch('spec2.json')
+      .then(response => response.json())
+      .then(spec => {
+        vegaEmbed('#vis2', spec);
+      })
+      .catch(error => console.error('Error loading Vega spec2:', error));
   </script>
 </body>
 </html>
