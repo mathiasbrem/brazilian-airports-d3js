@@ -1,26 +1,40 @@
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 #wrapper {
   display: flex;
   width: 100%;
-  align-items: stretch;
+  align-items: flex-start;
 }
 
 #sidebar-wrapper {
-  min-height: 100vh;
-  width: 300px; /* Aumentei a largura do menu */
-  transition: all 0.3s ease-in-out;
+  width: 250px;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+  border-right: 1px solid #dee2e6;
+}
+
+.logo {
+  width: 80%;
+  margin: 20px auto;
+  display: block;
 }
 
 #page-content-wrapper {
-  width: 100%;
+  width: calc(100% - 250px);
+  margin-left: 250px;
   padding: 20px;
 }
 
 .container-fluid {
-  max-width: 900px;
+  max-width: 950px;
   margin: 0 auto;
 }
 
@@ -37,26 +51,7 @@ section {
   margin-bottom: 20px;
 }
 
-.card {
-  border: none;
-  border-radius: 10px;
-}
-
-.card img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-}
-
-.card-body {
-  text-align: center;
-}
-
-.card-title {
-  font-size: 1.25rem;
-  margin-bottom: 0.5rem;
-}
-
-.card-text {
-  font-size: 1rem;
-  margin-bottom: 1rem;
+#vis1, #vis2 {
+  width: 100%;
+  height: 500px; /* Altura fixa para o gráfico */
 }

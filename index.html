@@ -3,29 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Analise de Dados Aereos do Brasil - Ano 2023</title>
+  <meta property="og:image" content="http://www.icmc.usp.br/imprensa/_thumb1/icone-noticia.jpg" />        
+  <link rel="icon" href="http://www.icmc.usp.br/templates/icmc2015/img/ico/favicon.ico" />
+  <title>Análise de Dados Aéreos do Brasil - Ano 2023</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
-  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@5"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body>
-  <div class="d-flex" id="wrapper">
+  <div id="wrapper" class="d-flex">
     <!-- Sidebar -->
-    <div class="bg-light border-right" id="sidebar-wrapper">
+    <div id="sidebar-wrapper" class="bg-light border-right">
+      <div class="sidebar-heading">
+        <img src="https://web.icmc.usp.br/SCAPINST/identidade_visual/logomarca/LOGO%20ICMC%20PRETO.png" alt="ICMC USP Logo" class="logo">
+      </div>
       <div class="list-group list-group-flush">
         <a href="#section1" class="list-group-item list-group-item-action bg-light">Introdução</a>
-        <a href="#section2" class="list-group-item list-group-item-action bg-light">Gráfico - Rotas Aéreas</a>
-        <a href="#section3" class="list-group-item list-group-item-action bg-light">Análise 2</a>
+        <a href="#section2" class="list-group-item list-group-item-action bg-light">Rotas Aéreas</a>
+        <a href="#section3" class="list-group-item list-group-item-action bg-light">Aeroportos por Municipio</a>
+        <a href="#section3" class="list-group-item list-group-item-action bg-light">Reclamações 2023</a>
+        <a href="#section3" class="list-group-item list-group-item-action bg-light">Aeroportos por Municipio</a>
         <a href="#section4" class="list-group-item list-group-item-action bg-light">Conclusão</a>
+        <a href="#sources" class="list-group-item list-group-item-action bg-light">Fontes de Dados</a>
         <a href="#authors" class="list-group-item list-group-item-action bg-light">Autores</a>
       </div>
     </div>
     <!-- /#sidebar-wrapper -->
 
     <!-- Page Content -->
-    <div id="page-content-wrapper">
+    <div id="page-content-wrapper" class="w-100">
       <div class="container-fluid">
         <section id="section1" class="my-5">
           <h1 class="mt-4">Introdução</h1>
@@ -46,35 +54,45 @@
           <h1 class="mt-4">Conclusão</h1>
           <p>Resumo das conclusões e implicações das análises apresentadas.</p>
         </section>
+        <section id="sources" class="my-5">
+          <h1 class="mt-4">Fontes de Dados</h1>
+          <p>Os dados utilizados para esta análise foram obtidos a partir dos dados abertos do portal da transparência, especificamente da ANAC. Para mais detalhes, consulte os links abaixo:</p>
+          <ul>
+            <li><a href="https://transparencia.gov.br/" target="_blank">Portal da Transparência</a></li>
+            <li><a href="https://www.gov.br/anac/pt-br" target="_blank">ANAC</a></li>
+          </ul>
+          <p>O notebook Jupyter utilizado para a análise pode ser acessado <a href="link/to/jupyter-notebook" target="_blank">aqui</a>.</p>
+          <p>O paper em formato PDF pode ser acessado <a href="link/to/paper.pdf" target="_blank">aqui</a>.</p>
+        </section>
         <section id="authors" class="my-5">
           <h1 class="mt-4">Autores</h1>
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                <img src="path/to/author1.jpg" class="card-img-top" alt="Author 1 Photo">
+                <img src="img/mathias.jpeg" class="card-img-top" alt="Mathias Brem Garcia">
                 <div class="card-body">
-                  <h5 class="card-title">Author 1</h5>
-                  <p class="card-text">Currículo de Author 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                  <a href="https://www.linkedin.com/in/author1" class="btn btn-primary" target="_blank">LinkedIn</a>
+                  <h5 class="card-title">Mathias Brem Garcia</h5>
+                  <p class="card-text">MECAI 2023</p>
+                  <a href="https://www.linkedin.com/in/mathiasbremgarcia/" class="btn btn-primary" target="_blank">LinkedIn</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                <img src="path/to/author2.jpg" class="card-img-top" alt="Author 2 Photo">
+                <img src="img/joao.jpeg" class="card-img-top" alt="Author 2 Photo">
                 <div class="card-body">
-                  <h5 class="card-title">Author 2</h5>
-                  <p class="card-text">Currículo de Author 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
-                  <a href="https://www.linkedin.com/in/author2" class="btn btn-primary" target="_blank">LinkedIn</a>
+                  <h5 class="card-title">João Luiz Pacher</h5>
+                  <p class="card-text">MECAI 2023</p>
+                  <a href="https://www.linkedin.com/in/joaopacher/" class="btn btn-primary" target="_blank">LinkedIn</a>
                 </div>
               </div>
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                <img src="path/to/author3.jpg" class="card-img-top" alt="Author 3 Photo">
+                <img src="path/to/author3.jpeg" class="card-img-top" alt="Author 3 Photo">
                 <div class="card-body">
                   <h5 class="card-title">Author 3</h5>
-                  <p class="card-text">Currículo de Author 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                  <p class="card-text">MECAI 2023</p>
                   <a href="https://www.linkedin.com/in/author3" class="btn btn-primary" target="_blank">LinkedIn</a>
                 </div>
               </div>
@@ -97,13 +115,6 @@
         vegaEmbed('#vis1', spec);
       })
       .catch(error => console.error('Error loading Vega spec1:', error));
-
-    fetch('spec2.json')
-      .then(response => response.json())
-      .then(spec => {
-        vegaEmbed('#vis2', spec);
-      })
-      .catch(error => console.error('Error loading Vega spec2:', error));
   </script>
 </body>
 </html>
