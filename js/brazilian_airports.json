@@ -20,10 +20,6 @@
       "bind": {"input": "range", "min": -300, "max": 700}
     },
     {
-      "name": "Formato", "value": "line",
-      "bind": {"input": "radio", "options": ["Linha", "Curva"]}
-    },
-    {
       "name": "hover",
       "value": null,
       "on": [
@@ -122,10 +118,6 @@
         {
           "type": "filter",
           "expr": "datum.source && datum.target"
-        },
-        {
-          "type": "linkpath",
-          "shape": {"signal": "Formato"}
         }
       ]
     }
