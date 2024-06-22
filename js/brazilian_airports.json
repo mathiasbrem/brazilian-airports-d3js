@@ -1,6 +1,6 @@
 {
   "$schema": "https://vega.github.io/schema/vega/v5.json",
-  "description": "Interactive map of U.S. airport connections in 2008.",
+  "description": "Interactive map of Brazil airport connections in 2023.",
   "width": 1200,
   "height": 600,
   "padding": {"top": 25, "left": 0, "right": 0, "bottom": 0},
@@ -18,6 +18,10 @@
     {
       "name": "Y", "value": 60,
       "bind": {"input": "range", "min": -300, "max": 700}
+    },
+    {
+      "name": "Formato", "value": "line",
+      "bind": {"input": "radio", "options": ["Linha", "Curva"]}
     },
     {
       "name": "hover",
@@ -118,6 +122,10 @@
         {
           "type": "filter",
           "expr": "datum.source && datum.target"
+        },
+        {
+          "type": "linkpath",
+          "shape": {"signal": "Formato"}
         }
       ]
     }
