@@ -107,7 +107,7 @@
     },
     {
       "name": "routes",
-      "url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/flights-airport.csv",
+      "url": "https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/flights-airports.csv",
       "format": {"type": "csv", "parse": "auto"},
       "transform": [
         {
