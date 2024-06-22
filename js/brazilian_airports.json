@@ -21,7 +21,7 @@
     },
     {
       "name": "Formato", "value": "line",
-      "bind": {"input": "radio", "options": ["Linha", "Curva"]}
+      "bind": {"input": "radio", "options": ["line", "curve"]}
     },
     {
       "name": "hover",
