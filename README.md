@@ -51,8 +51,10 @@ VEGA is licensed under the following terms:
 Copyright (c) 2015-2019, University of Washington Interactive Data Lab
 All rights reserved.
 
-# References
+# References and Thanks!
 https://vega.github.io/vega/tutorials/airports/
+
+
 https://helpcodenow.com/2019/06/19/chopleth-map-brazil-county-gdp-using-d3-js/
 https://luimucar.github.io/choropleth_br_counties/
 https://github.com/luimucar/choropleth_br_counties

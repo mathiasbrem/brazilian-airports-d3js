@@ -11,6 +11,22 @@
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.9.1/d3-tip.min.js"></script>
+  <script src="https://raw.githubusercontent.com/luimucar/choropleth_br_counties/master/lib/topojson.v2.min.js"></script>
+  <script src="https://raw.githubusercontent.com/luimucar/choropleth_br_counties/master/lib/d3-scale-chromatic.v1.min.js"></script>
+  <script src="https://raw.githubusercontent.com/luimucar/choropleth_br_counties/master/lib/d3-tip.min.js"></script>
+  <script src="js/cities_airports.js"></script> 
+  <script>
+    // Load Vega specifications
+    fetch('https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/js/brazilian_airports.json')
+      .then(response => response.json())
+      .then(spec => {
+        vegaEmbed('#vis1', spec);
+      })
+      .catch(error => console.error('Error loading Vega spec1:', error));
+  </script>
 </head>
 <body>
   <div id="wrapper" class="d-flex">
@@ -40,14 +56,14 @@
           <p>Análise de Dados dos Voos entre Aeroportos Brasileiros para o Ano de 2023</p>
         </section>
         <section id="section2" class="my-5">
-          <h1 class="mt-4">Gráfico de Disponibilidade de Rotas Aéreas</h1>
+          <h1 class="mt-4">Rotas Aéreas por Aeroporto</h1>
           <div id="vis1" class="my-3"></div>
           <p>Esse gráfico iterativo tem como objetivo representar um gráfico entre os aeroportos públicos brasileiros. A proporção dos nós é calculada conforme a quantidade de rotas entre o aeroporto e suas conexões, portanto, quanto maior o tamanho do nó, maior é a quantidade de destinos.</p>
         </section>
         <section id="section3" class="my-5">
-          <h1 class="mt-4">Análise 2</h1>
-          <h2>Subtítulo para a Análise 2</h2>
-          <div id="vis2" class="my-3"></div>
+          <h1 class="mt-4">Aeroportos por Municipio</h1>
+          <!-- <h2></h2>-->
+          <svg width="920" height="920"></svg>
           <p>Descrição da segunda análise e do gráfico correspondente.</p>
         </section>
         <section id="section4" class="my-5">
@@ -89,11 +105,11 @@
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                <img src="path/to/author3.jpeg" class="card-img-top" alt="Author 3 Photo">
+                <img src="img/larissa.jpeg" class="card-img-top" alt="Author 3 Photo">
                 <div class="card-body">
-                  <h5 class="card-title">Author 3</h5>
+                  <h5 class="card-title">Larissa Carolina</h5>
                   <p class="card-text">MECAI 2023</p>
-                  <a href="https://www.linkedin.com/in/author3" class="btn btn-primary" target="_blank">LinkedIn</a>
+                  <a href="www.linkedin.com/in/larissa-carolina" class="btn btn-primary" target="_blank">LinkedIn</a>
                 </div>
               </div>
             </div>
@@ -104,17 +120,5 @@
     <!-- /#page-content-wrapper -->
   </div>
   <!-- /#wrapper -->
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // Load Vega specifications
-    fetch('https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/js/brazilian_airports.json')
-      .then(response => response.json())
-      .then(spec => {
-        vegaEmbed('#vis1', spec);
-      })
-      .catch(error => console.error('Error loading Vega spec1:', error));
-  </script>
 </body>
 </html>

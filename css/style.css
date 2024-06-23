@@ -55,3 +55,14 @@ section {
   width: 100%;
   height: 500px; /* Altura fixa para o gráfico */
 }
+
+
+.counties {
+  fill: none;
+}
+
+.states {
+  fill: none;
+  stroke: #fff;
+  stroke-linejoin: round;
+}
