@@ -9,12 +9,11 @@ function load() {
         height = +svg.attr("height");
 
     // Create a map(id, column) for each data column to display
-    var Pib_current = d3.map();
-    var Population = d3.map();
-    var TotalPop = d3.map();
-    var PibPerCap = d3.map();
-    var State = d3.map();
-    var County = d3.map();
+    var cidade = d3.map();
+    var uf = d3.map();
+    var carga_despachada = d3.map();
+    var passageiros_embarcados = d3.map();
+    var voos_decolagens = d3.map();
     var path = d3.geoPath();
 
     // The linear scale for the poverty rate
@@ -120,7 +119,7 @@ function load() {
             .data(brm.features)
             .enter().append("path")
             .attr("fill", function(d) {
-                return color(d.Population = PibPerCap.get(d.properties.COD_IBGE));
+                return color(d.Population = voos_decolagens.get(d.properties.voos_decolagens));
             })
             .attr("d", path)
             .on('mouseover', tip.show)
