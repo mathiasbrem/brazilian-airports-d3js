@@ -86,12 +86,12 @@ function load() {
 
     var promises = [
         d3.json("https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/br_cities.json"),
-        d3.csv("https://raw.githubusercontent.com/luimucar/choropleth_br_counties/master/counties_pib_2.csv", function(d) {
-            Pib_current.set(d.id, d.pib_current);
-            Population.set(d.id, d.population);
-            PibPerCap.set(d.id, d.pib_percapita);
-            County.set(d.id, d.name);
-            State.set(d.id, d.state);
+        d3.csv("https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/data/flights_cities.csv", function(d) {
+            passageiros_embarcados.set(d.id, d.passageiros_embarcados);
+            voos_decolagens.set(d.id, d.voos_decolagens);
+            carga_despachada.set(d.id, d.carga_despachada);
+            cidade.set(d.id, d.ucidadef);
+            uf.set(d.id, d.uf);
         })
     ];
 
@@ -103,11 +103,11 @@ function load() {
         .offset([140, 140])
         .html(function(d) {
             return "<div style='opacity:0.8;background-color:steelblue;font-family:Arial;padding:8px;color:white'>" +
-                "Cidade: " + d.properties.NOME_MUNI + "<br/>" +
-                "Estado: " + d.properties.NOME_UF + "<br/>" +
-                "Voos: " + Population.get(d.properties.COD_IBGE) + "<br/>" +
-                "Aeroportos Publicos: " + PibPerCap.get(d.properties.COD_IBGE) + "<br/>" +
-                "Aeroportos Privados: " + Pib_current.get(d.properties.COD_IBGE) +
+                "Cidade: " + d.properties.cidade + "<br/>" +
+                "Estado: " + d.properties.uf + "<br/>" +
+                "Decolagens: " + voos_decolagens.get(d.properties.voos_decolagens) + "<br/>" +
+                "Passageiros Embarcados: " + passageiros_embarcados.get(d.properties.passageiros_embarcados) + "<br/>" +
+                "Carga Despachada: " + carga_despachada.get(d.properties.carga_despachada) +
                 "</div>";
         });
 
