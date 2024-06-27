@@ -66,3 +66,7 @@ section {
   stroke: #fff;
   stroke-linejoin: round;
 }
+
+.mt-3{
+  text-align: center;
+}

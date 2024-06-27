@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta property="og:image" content="http://www.icmc.usp.br/imprensa/_thumb1/icone-noticia.jpg" />        
   <link rel="icon" href="http://www.icmc.usp.br/templates/icmc2015/img/ico/favicon.ico" />
-  <title>Análise de Dados Aéreos do Brasil - Ano 2023</title>
+  <title>Estudo sobre origem e destinos de voos no Brasil</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
@@ -26,6 +26,12 @@
         vegaEmbed('#vis1', spec);
       })
       .catch(error => console.error('Error loading Vega spec1:', error));
+      fetch('https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/js/cities_airports_vega.json')
+      .then(response => response.json())
+      .then(spec => {
+        vegaEmbed('#vis2', spec);
+      })
+      .catch(error => console.error('Error loading Vega spec1:', error));
   </script>
 </head>
 <body>
@@ -36,12 +42,13 @@
         <img src="https://web.icmc.usp.br/SCAPINST/identidade_visual/logomarca/LOGO%20ICMC%20PRETO.png" alt="ICMC USP Logo" class="logo">
       </div>
       <div class="list-group list-group-flush">
-        <a href="#section1" class="list-group-item list-group-item-action bg-light">Introdução</a>
-        <a href="#section2" class="list-group-item list-group-item-action bg-light">Rotas Aéreas</a>
-        <a href="#section3" class="list-group-item list-group-item-action bg-light">Aeroportos por Municipio</a>
-        <a href="#section3" class="list-group-item list-group-item-action bg-light">Reclamações 2023</a>
-        <a href="#section3" class="list-group-item list-group-item-action bg-light">Aeroportos por Municipio</a>
-        <a href="#section4" class="list-group-item list-group-item-action bg-light">Conclusão</a>
+        <a href="#resume" class="list-group-item list-group-item-action bg-light">Resumo</a>
+        <a href="#section-1" class="list-group-item list-group-item-action bg-light">1 - Introdução</a>
+        <a href="#section-2" class="list-group-item list-group-item-action bg-light">2 - Analise Exploratória</a>
+        <a href="#section-3" class="list-group-item list-group-item-action bg-light">3 - Métodos Utilizados</a>
+        <a href="#section-3-1" class="list-group-item list-group-item-action bg-light">3.1 - Rotas Areas</a>
+        <a href="#section-3-2" class="list-group-item list-group-item-action bg-light">3.2 - Reclamações dos Usuários</a>
+        <a href="#conclusion" class="list-group-item list-group-item-action bg-light">Conclusão</a>
         <a href="#sources" class="list-group-item list-group-item-action bg-light">Fontes de Dados</a>
         <a href="#authors" class="list-group-item list-group-item-action bg-light">Autores</a>
       </div>
@@ -51,27 +58,144 @@
     <!-- Page Content -->
     <div id="page-content-wrapper" class="w-100">
       <div class="container-fluid">
-        <section id="section1" class="my-5">
-          <h1 class="mt-4">Introdução</h1>
-          <p>Análise de Dados dos Voos entre Aeroportos Brasileiros para o Ano de 2023</p>
+        <section id="resume" class="my-5">
+          <h1 class="mt-3">Resumo</h1>
+          <p>A Agência Nacional de Viação Civil (ANAC), agência reguladora do transporte aéreo no Brasil, disponibilidade em seu portal dados sobre o transporte aéreo brasileiro para consulta péblica. Tais dados permite por meio de sua análise conhcer e explorar o comportamento das agências de aviação e passageiros do Brasil. De posse desses dados, foram desenvolvidas análises estatásticas e vizualizações que nos permitem extrair informações e insights como origem e destino de voos, tépicos mais frequentes em reclamações, distribuições dos tipos de voos e etc.
+          </p>
         </section>
-        <section id="section2" class="my-5">
-          <h1 class="mt-4">Rotas Aéreas por Aeroporto</h1>
+        <section id="section-1" class="my-5">
+          <h1 class="mt-4">1. Introdução</h1>
+          <p>Com o intuito de ampliar o conhecimento da sociedade brasileira e de subsidiar a realização de pesquisas, estudos e análises mais abrangentes sobre o setor, a ANAC tem disponibilizado, na seção "Dados e Estatísticas" do seu portal na internet, relatórios, estudos e informações sobre as condições de mercado.
+            A série histórica (desde o ano 2000) disponibilizada no portal possui alto grau de detalhamento. A análise e entendimento desses dados têm potencial para nos ajudar a entender as conexões existentes entre os aeroportos do Brasil, o perfil de voo operado por cada um deles, passageiros, cargas e reclamações feitas.
+            Regulamentados pela Resolução ANAC nº 191/2011 e pelas Portarias ANAC nº 1.189 e 1.190/SRE/2011, os dados são mensalmente fornecidos à ANAC, até o dia 10 do mês subsequente ao de referência, pelas empresas brasileiras e estrangeiras que exploram os serviços de transporte aéreo público regular e não regular no Brasil.
+            Na busca pela melhoria continuada da qualidade da informação e com o propósito de alcançar o maior nível de consistência possível, os dados são submetidos a críticas, validações e procedimentos de auditoria pela Agência. Assim, os dados estão sujeitos a revisões, correções e alterações, podendo apresentar diferenças em relação àqueles divulgados anteriormente ou mesmo discrepâncias e observações, conhecidas como outliers, que devem ser consideradas em sua análise.
+          </p>
+        </section>
+        <section id="section-2" class="my-5">
+          <h1 class="mt-4">2. Exploração de dados</h1>
+          <p>Com o intuito de ampliar o conhecimento da sociedade brasileira e de subsidiar a realização de pesquisas, estudos e análises mais abrangentes sobre o setor, a ANAC tem disponibilizado, na seção "Dados e Estatísticas" do seu portal na internet, relatórios, estudos e informações sobre as condições de mercado.
+            A série histórica (desde o ano 2000) disponibilizada no portal possui alto grau de detalhamento. A análise e entendimento desses dados têm potencial para nos ajudar a entender as conexões existentes entre os aeroportos do Brasil, o perfil de voo operado por cada um deles, passageiros, cargas e reclamações feitas.
+            Regulamentados pela Resolução ANAC nº 191/2011 e pelas Portarias ANAC nº 1.189 e 1.190/SRE/2011, os dados são mensalmente fornecidos à ANAC, até o dia 10 do mês subsequente ao de referência, pelas empresas brasileiras e estrangeiras que exploram os serviços de transporte aéreo público regular e não regular no Brasil.
+            Na busca pela melhoria continuada da qualidade da informação e com o propósito de alcançar o maior nível de consistência possível, os dados são submetidos a críticas, validações e procedimentos de auditoria pela Agência. Assim, os dados estão sujeitos a revisões, correções e alterações, podendo apresentar diferenças em relação àqueles divulgados anteriormente ou mesmo discrepâncias e observações, conhecidas como outliers, que devem ser consideradas em sua análise.
+          </p>
+        </section>
+        <section id="section-2-1" class="my-5">
+          <h1 class="mt-4">2.1 Metados</h1>
+          <p>
+            Lorem ipsum
+          </p>
+        </section>
+        <section id="section-2-2" class="my-5">
+          <h1 class="mt-4">2.2 Dados Faltantes</h1>
+          <p>
+            Lorem ipsum
+          </p>
+        </section>
+        <section id="section-2-3" class="my-5">
+          <h1 class="mt-4">2.3 Voos, Passageiros e Carga por Ano</h1>
+          <p>
+            O número de voos permaneceu relativamente estável ao longo dos anos, exceto no ano de 2020, com queda acentuada devido à pandemia da Covid-19, conforme mostrado na Figura 3. O número de passageiros e o volume de carga apresentam-se numa série ascendente. 
+            Em conclusão, supõe-se que as aeronaves utilizadas tenham aumentado de capacidade para comportar essa elevação de passageiros e carga.
+          </p>
+        </section>
+        <section id="section-2-4" class="my-5">
+          <h1 class="mt-4">2.4 Voos, combustível e capacidade por Ano</h1>
+          <p>
+            Pelo gráfico acima, observa-se novamente que o número de voos permanece relativamente estável conforme já visto no item anterior.
+            A capacidade teve crescimento no período, o que explica o aumento do número de passageiros e de carga transportada mesmo tendo o mesmo nível de quantidade de voos, conforme visto no item anterior.
+            O consumo de combustível também se elevou, o que pode ser explicado pela elevação da quantidade de passageiros e carga no período.
+          </p>
+        </section>
+        <section id="section-2-5" class="my-5">
+          <h1 class="mt-4">2.5 Correlações de Pearson</h1>
+          <p>
+            A Figura 5 mostra o Mapa de Calor para as Correlações de Pearson. Existem alguns grupos de variáveis com correlação muitíssimo elevada.
+            Relacionadas à capacidade e utilização:
+
+            Consumo de combustível
+            Distância Voada
+            Horas Voadas
+            ASK - assentos disponíveis x km voados
+            RPK - passageiros pagantes x km voados
+            ATK - capacidade de peso (passageiros + carga + correio) x km voados
+            RTK - peso carregado (passageiros + carga + correio) x km voados
+            Relacionadas ao transporte de passageiros:
+
+            Assentos Disponíveis
+            Passageiros Pagos
+            Payload (capacidade total de peso da aeronave)
+            Esses foram os grupos principais, mas outras correlações fortes ainda podem ser encontradas.
+          </p>
+        </section>
+        <section id="section-2-6" class="my-5">
+          <h1 class="mt-4">2.6 Núumero de Voos, Passageiros e Carga por Aeroporto de Origem</h1>
+          <p>
+            São apresentados os top 10 aeroportos de origem por número de voos e a evolução desde o ano 2000 na Figura 6.
+            Os aeroportos de Guarulhos, Galeão, Viracopos e Manaus têm uma concentração maior no transporte de cargas do que os demais.
+          </p>
+        </section>
+        <section id="section-2-7" class="my-5">
+          <h1 class="mt-4">2.7 Evolução de Voos por Aeroporto de Origem</h1>
+          <p>
+            São apresentados os top 10 aeroportos de origem por núumero de voos desde o ano 2000 na
+            Figura 7
+            O aeroporto de Viracopos teve um crescimento bastante expressivo enquanto que o Galeão
+            teve queda.
+          </p>
+        </section>
+        <section id="section-2-8" class="my-5">
+          <h1 class="mt-4">2.8 Evolução de Passageiros por Natureza</h1>
+          <p>
+            A Figura 8 traz informações sobre a natureza dos passageiros quanto ao destino dos voos. Tanto os passageiros domésticos quanto internacionais tiveram crescimento no período, embora os domésticos tenham tido um crescimento bem mais acentuado.
+          </p>
+        </section>
+        <section id="section-2-9" class="my-5">
+          <h1 class="mt-4">2.9 Voos, Passageiros e Carga por Região do Aeroporto de Origem</h1>
+          <p>
+            As Figuras 9, 10 e 11 trazem um comparativo da distribuição dos Aeroportos de Origem por Região ao longo dos anos.
+            Voos: aumento na região Sudeste, redução na região Norte e estável nas demais.
+            Passageiros: aumento na região Nordeste, redução na região Sudeste e estável nas demais.
+            Carga: aumento na região Sudeste, redução nas regiões Centro-Oeste e Sul e estável nas demais.
+          </p>
+        </section>
+        <section id="section-2-10" class="my-5">
+          <h1 class="mt-4">2.10 Fator de Carga</h1>
+          <p>
+            A Figura 12 traz informações a respeito do fator de carga das aeronaves, ou seja, o percentual de ocupação sobre a carga disponível.
+            A análise indica que as capacidades das aeronaves não são completamente ocupadas. Por exemplo, metade dos voos (frequência acumulada de 50%) tiveram uma ocupação inferior a 70% (fator de carga de 70%).
+          </p>
+        </section>
+        <section id="section-3" class="my-5">
+          <h1 class="mt-4">3. Métodos</h1>
+          <p>
+            
+          </p>
+        </section>
+        <section id="section-3-1" class="my-5">
+          <h1 class="mt-4">3.1 Métodos</h1>
+          <p>
+            A base contém detalhes de reclamações feitas à ANAC entre os anos de 2017 e 2024. O objetivo desse tópico é visualizar os principais temas abordados nos textos recebidos.
+          </p>
+        </section>
+        <section id="section-3-2" class="my-5">
+          <h1 class="mt-4">3.2 Nuvem de Palavras</h1>
+          <p>
+            Pela Figura 13, podemos perceber que dentre as reclamações ocorridas no período, problemas relacionados a cancelamento, atraso, reclamações não atendidas, venda enganosa e cobrança indevida estão entre os mais comuns.
+          </p>
+        </section>
+        <section id="section-3-3" class="my-5">
+          <h1 class="mt-4">3.2 Grafo</h1>
           <div id="vis1" class="my-3"></div>
-          <p>Esse gráfico iterativo tem como objetivo representar um gráfico entre os aeroportos públicos brasileiros. A proporção dos nós é calculada conforme a quantidade de rotas entre o aeroporto e suas conexões, portanto, quanto maior o tamanho do nó, maior é a quantidade de destinos.</p>
+          <p>
+            Pela figura 14 podemos notar que aeroportos situados na região sudeste do país apresentam maior quantidade de voos comerciais ocorridos no período (principalmente no estado de São Paulo).
+          </p>
         </section>
-        <section id="section3" class="my-5">
-          <h1 class="mt-4">Aeroportos por Municipio</h1>
-          <!-- <h2></h2>-->
-          <svg width="920" height="920"></svg>
-          <p>Descrição da segunda análise e do gráfico correspondente.</p>
-        </section>
-        <section id="section4" class="my-5">
-          <h1 class="mt-4">Conclusão</h1>
+        <section id="conclusion" class="my-5">
+          <h1 class="mt-3">Conclusão</h1>
           <p>Resumo das conclusões e implicações das análises apresentadas.</p>
         </section>
         <section id="sources" class="my-5">
-          <h1 class="mt-4">Fontes de Dados</h1>
+          <h1 class="mt-3">Fontes de Dados</h1>
           <p>Os dados utilizados para esta análise foram obtidos a partir dos dados abertos do portal da transparência, especificamente da ANAC. Para mais detalhes, consulte os links abaixo:</p>
           <ul>
             <li><a href="https://transparencia.gov.br/" target="_blank">Portal da Transparência</a></li>
@@ -81,7 +205,7 @@
           <p>O paper em formato PDF pode ser acessado <a href="link/to/paper.pdf" target="_blank">aqui</a>.</p>
         </section>
         <section id="authors" class="my-5">
-          <h1 class="mt-4">Autores</h1>
+          <h1 class="mt-3">Autores</h1>
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
@@ -109,7 +233,7 @@
                 <div class="card-body">
                   <h5 class="card-title">Larissa Carolina</h5>
                   <p class="card-text">MECAI 2023</p>
-                  <a href="www.linkedin.com/in/larissa-carolina" class="btn btn-primary" target="_blank">LinkedIn</a>
+                  <a href="https://www.linkedin.com/in/larissa-carolina" class="btn btn-primary" target="_blank">LinkedIn</a>
                 </div>
               </div>
             </div>
