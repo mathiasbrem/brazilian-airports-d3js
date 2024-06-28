@@ -7,91 +7,7 @@
   <link rel="icon" href="http://www.icmc.usp.br/templates/icmc2015/img/ico/favicon.ico" />
   <title>Estudo sobre origem e destinos de voos no Brasil</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    #wrapper {
-      display: flex;
-      width: 100%;
-      align-items: flex-start;
-    }
-
-    .legend{
-      text-align: center;
-      padding: 4px;
-    }
-
-    p {
-      padding-top: 6px;
-      text-indent: 30px;
-      text-align: justify;
-    }
-
-    #sidebar-wrapper {
-      width: 250px;
-      position: fixed;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      overflow-y: auto;
-      background-color: #f8f9fa;
-      border-right: 1px solid #dee2e6;
-    }
-
-    .logo {
-      width: 80%;
-      margin: 20px auto;
-      display: block;
-    }
-
-    #page-content-wrapper {
-      width: calc(100% - 250px);
-      margin-left: 250px;
-      padding: 20px;
-    }
-
-    .container-fluid {
-      max-width: 950px;
-      margin: 0 auto;
-    }
-
-    .list-group-item-action:hover {
-      background-color: #f8f9fa;
-      color: #007bff;
-    }
-
-    section {
-      padding: 20px;
-      background: #fff;
-      border-radius: 5px;
-      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
-      margin-bottom: 20px;
-    }
-
-    #vis1, #vis2 {
-      width: 100%;
-      height: 500px; /* Altura fixa para o gráfico */
-    }
-
-
-    .counties {
-      fill: none;
-    }
-
-    .states {
-      fill: none;
-      stroke: #fff;
-      stroke-linejoin: round;
-    }
-
-    .mt-3{
-      text-align: center;
-    }
-  </style>
+  <link rel="stylesheet" href="css/style.css">
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -166,18 +82,16 @@ Apesar de estarem dispostas como informações de etapas básicas, as variáveis
         </section>
         <section id="section-2-2" class="my-5">
           <h1 class="mt-4">2.2 Dados Faltantes</h1>
-          <img src="https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/img/dados_faltantes1.png"  alt="Dados Faltantes" class="img-fluid">
-          <figcaption class="legend">Figura 1: Quantidade de Valores Nulos por Coluna</figcaption>
+          <img src="img/dados_faltantes1.png"  alt="Dados Faltantes" class="img-fluid">
           <p>
             Pela Figura 1, observa-se que algumas colunas possuem uma grande quantidade de valores faltantes (nulos), ultrapassando os 10% e chegando até 30% do total, portanto deve-se levar isso em consideração na exploração dessas variáveis. A Figura 2 complementa essa visão, mostrando uma redução na quantidade de dados faltantes com o passar do tempo, indo de um patamar de 13% no início da série para cerca de 5% a partir do ano de 2021, o que pode sugerir que os dados mais recentes são mais completos.
           </p>
-          <img src="https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/img/dados_faltantes2.png"  alt="Dados Faltantes" class="img-fluid">
-          <figcaption class="legend">Figura 2: Histograma Distribuição do Percentual  de Nulos por Ano.</figcaption>
+          <img src="img/dados_faltantes2.png"  alt="Dados Faltantes" class="img-fluid">
         </section>
         <section id="section-2-3" class="my-5">
           <h1 class="mt-4">2.3 Voos, Passageiros e Carga por Ano</h1>
-          <img src="https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/img/spaguetti_1.png"  alt="Voos, Passageiros e Carga por Ano" class="img-fluid">
-          <figcaption class="legend">Figura 3: Voos, Passageiros e Carga Transportada por Ano.</figcaption>
+          <img src="img/spaguetti_1.png"  alt="Voos, Passageiros e Carga por Ano" class="img-fluid">
+          <figcaption class="legend">Figura 1: Voos, Passageiros e Carga Transportada por Ano.</figcaption>
           <p>
             O número de voos permaneceu relativamente estável ao longo dos anos, exceto no ano de 2020, com queda acentuada devido à pandemia da Covid-19, conforme mostrado na Figura 3. O número de passageiros e o volume de carga apresentam-se numa série ascendente. 
             Em conclusão, supõe-se que as aeronaves utilizadas tenham aumentado de capacidade para comportar essa elevação de passageiros e carga.
@@ -185,8 +99,7 @@ Apesar de estarem dispostas como informações de etapas básicas, as variáveis
         </section>
         <section id="section-2-4" class="my-5">
           <h1 class="mt-4">2.4 Voos, combustível e capacidade por Ano</h1>
-          <img src="https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/img/spaguetti_2.png"  alt="Voos, combustível e capacidade por Ano" class="img-fluid">
-          <figcaption class="legend">Figura 4: Voos, combustível e capacidade por Ano</figcaption>
+          <img src="img/spaguetti_2.png"  alt="Voos, combustível e capacidade por Ano" class="img-fluid">
           <p>
             Pelo gráfico acima, observa-se novamente que o número de voos permanece relativamente estável conforme já visto no item anterior.
             A capacidade teve crescimento no período, o que explica o aumento do número de passageiros e de carga transportada mesmo tendo o mesmo nível de quantidade de voos, conforme visto no item anterior.
@@ -195,8 +108,7 @@ Apesar de estarem dispostas como informações de etapas básicas, as variáveis
         </section>
         <section id="section-2-5" class="my-5">
           <h1 class="mt-4">2.5 Correlações de Pearson</h1>
-          <img src="https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/img/mapa_calor1.png"  alt="Correlações de Pearson" class="img-fluid">
-          <figcaption class="legend">Figura 5: Mapa de Calor</figcaption>
+          <img src="img/mapa_calor1.png"  alt="Correlações de Pearson" class="img-fluid">
           <p>
             A Figura 5 mostra o Mapa de Calor para as Correlações de Pearson. Existem alguns grupos de variáveis com correlação muitíssimo elevada.
             Relacionadas à capacidade e utilização:
@@ -218,8 +130,7 @@ Apesar de estarem dispostas como informações de etapas básicas, as variáveis
         </section>
         <section id="section-2-6" class="my-5">
           <h1 class="mt-4">2.6 Número de Voos, Passageiros e Carga por Aeroporto de Origem</h1>
-          <img src="https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/img/lollipop.png"  alt="Número de Voos, Passageiros e Carga por Aeroporto de Origem" class="img-fluid">
-          <figcaption class="legend">Figura 6: Número de Voos, Passageiros e Carga por Aeroporto de Origem</figcaption>
+          <img src="img/lollipop.png"  alt="Número de Voos, Passageiros e Carga por Aeroporto de Origem" class="img-fluid">
           <p>
             São apresentados os top 10 aeroportos de origem por número de voos e a evolução desde o ano 2000 na Figura 6.
             Os aeroportos de Guarulhos, Galeão, Viracopos e Manaus têm uma concentração maior no transporte de cargas do que os demais.
@@ -227,8 +138,7 @@ Apesar de estarem dispostas como informações de etapas básicas, as variáveis
         </section>
         <section id="section-2-7" class="my-5">
           <h1 class="mt-4">2.7 Evolução de Voos por Aeroporto de Origem</h1>
-          <img src="https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/img/spaguetti_3.png"  alt="Evolução de Voos por Aeroporto de Origem" class="img-fluid">
-          <figcaption class="legend">Figura 7: Evolução de Voos por Aeroporto de Origem</figcaption>
+          <img src="img/spaguetti_3.png"  alt="Evolução de Voos por Aeroporto de Origem" class="img-fluid">
           <p>
             São apresentados os top 10 aeroportos de origem por núumero de voos desde o ano 2000 na
             Figura 7
@@ -238,20 +148,16 @@ Apesar de estarem dispostas como informações de etapas básicas, as variáveis
         </section>
         <section id="section-2-8" class="my-5">
           <h1 class="mt-4">2.8 Evolução de Passageiros por Natureza</h1>
-          <figcaption class="legend">Figura 8: Evolução de Passageiros por Natureza</figcaption>
-          <img src="https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/img/spaguetti_4.png"  alt="Evolução de Passageiros por Natureza" class="img-fluid">
+          <img src="img/spaguetti_4.png"  alt="Evolução de Passageiros por Natureza" class="img-fluid">
           <p>
             A Figura 8 traz informações sobre a natureza dos passageiros quanto ao destino dos voos. Tanto os passageiros domésticos quanto internacionais tiveram crescimento no período, embora os domésticos tenham tido um crescimento bem mais acentuado.
           </p>
         </section>
         <section id="section-2-9" class="my-5">
           <h1 class="mt-4">2.9 Voos, Passageiros e Carga por Região do Aeroporto de Origem</h1>
-          <img src="https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/img/slide1.png"  alt="Voos, Passageiros e Carga por Região do Aeroporto de Origem" class="img-fluid">
-          <figcaption class="legend">Figura 9: Voos, Passageiros e Carga por Região do Aeroporto de Origem.</figcaption>
-          <img src="https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/img/slide2.png"  alt="Voos, Passageiros e Carga por Região do Aeroporto de Origem" class="img-fluid">
-          <figcaption class="legend">Figura 10: Voos, Passageiros e Carga por Região do Aeroporto de Origem.</figcaption>
-          <img src="https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/img/slide3.png"  alt="Voos, Passageiros e Carga por Região do Aeroporto de Origem" class="img-fluid">
-          <figcaption class="legend">Figura 11: Voos, Passageiros e Carga por Região do Aeroporto de Origem.</figcaption>
+          <img src="img/slide1.png"  alt="Voos, Passageiros e Carga por Região do Aeroporto de Origem" class="img-fluid">
+          <img src="img/slide2.png"  alt="Voos, Passageiros e Carga por Região do Aeroporto de Origem" class="img-fluid">
+          <img src="img/slide3.png"  alt="Voos, Passageiros e Carga por Região do Aeroporto de Origem" class="img-fluid">
           <p>
             As Figuras 9, 10 e 11 trazem um comparativo da distribuição dos Aeroportos de Origem por Região ao longo dos anos.
             Voos: aumento na região Sudeste, redução na região Norte e estável nas demais.
@@ -261,8 +167,7 @@ Apesar de estarem dispostas como informações de etapas básicas, as variáveis
         </section>
         <section id="section-2-10" class="my-5">
           <h1 class="mt-4">2.10 Fator de Carga</h1>
-          <img src="https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/img/fator_carga.png"  alt="Fator de Carga" class="img-fluid">
-          <figcaption class="legend">Figura 12: Fator de Carga</figcaption>
+          <img src="img/fator_carga.png"  alt="Fator de Carga" class="img-fluid">
           <p>
             A Figura 12 traz informações a respeito do fator de carga das aeronaves, ou seja, o percentual de ocupação sobre a carga disponível.
             A análise indica que as capacidades das aeronaves não são completamente ocupadas. Por exemplo, metade dos voos (frequência acumulada de 50%) tiveram uma ocupação inferior a 70% (fator de carga de 70%).
@@ -276,8 +181,7 @@ Apesar de estarem dispostas como informações de etapas básicas, as variáveis
         </section>
         <section id="section-3-1" class="my-5">
           <h1 class="mt-4">3.1 Reclamações dos Usuários</h1>
-          <img src="https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/img/nuvem_palavras.jpeg"  alt="Fator de Carga" class="img-fluid">
-          <figcaption class="legend">Figura 13: Nuvem de Palavras - Reclamações</figcaption>
+          <div style="text-align: center;"><img src="img/nuvem_palavras.jpeg" width="579px" height="565px"   alt="Fator de Carga" class="img-fluid"></div>
           <p>
             Pela Figura 13, podemos perceber que dentre as reclamações ocorridas no período, problemas relacionados a cancelamento, atraso, reclamações não atendidas, venda enganosa e cobrança indevida estão entre os mais comuns.
           </p>
@@ -285,9 +189,8 @@ Apesar de estarem dispostas como informações de etapas básicas, as variáveis
         <section id="section-3-2" class="my-5">
           <h1 class="mt-4">3.2 Rotas Aereas</h1>
           <div id="vis1" class="my-3"></div>
-          <figcaption class="legend">Figura 14: Fluxo de Voos entre os Aeroportos</figcaption>
           <p>
-            Pela Figura 14 podemos notar que aeroportos situados na região sudeste do país apresentam maior quantidade de voos comerciais ocorridos no período (principalmente no estado de São Paulo).
+            Pela figura 14 podemos notar que aeroportos situados na região sudeste do país apresentam maior quantidade de voos comerciais ocorridos no período (principalmente no estado de São Paulo).
           </p>
         </section>
         <section id="conclusion" class="my-5">
@@ -301,14 +204,14 @@ Apesar de estarem dispostas como informações de etapas básicas, as variáveis
             <li><a href="https://transparencia.gov.br/" target="_blank">Portal da Transparência</a></li>
             <li><a href="https://www.gov.br/anac/pt-br" target="_blank">ANAC</a></li>
           </ul>
-          <p>O notebook Jupyter utilizado para a análise pode ser acessado <a href="https://github.com/jlpacher/MECAI-MAI5017-TrabalhoFinal/blob/main/transporte_aereo.ipynb" target="_blank">aqui</a>.</p>
+          <p>O notebook Jupyter utilizado para a análise pode ser acessado <a href="link/to/jupyter-notebook" target="_blank">aqui</a>.</p>
         </section>
         <section id="authors" class="my-5">
           <h1 class="mt-3">Autores</h1>
           <div class="row">
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                <img src="https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/img/mathias.jpeg" class="card-img-top" alt="Mathias Brem Garcia">
+                <img src="img/mathias.jpeg" class="card-img-top" alt="Mathias Brem Garcia">
                 <div class="card-body">
                   <h5 class="card-title">Mathias Brem Garcia</h5>
                   <p class="card-text">MECAI</p>
@@ -318,7 +221,7 @@ Apesar de estarem dispostas como informações de etapas básicas, as variáveis
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                <img src="https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/img/joao.jpeg" class="card-img-top" alt="João Pacher">
+                <img src="img/joao.jpeg" class="card-img-top" alt="João Pacher">
                 <div class="card-body">
                   <h5 class="card-title">João Luiz Pacher</h5>
                   <p class="card-text">MECAI</p>
@@ -328,7 +231,7 @@ Apesar de estarem dispostas como informações de etapas básicas, as variáveis
             </div>
             <div class="col-md-4">
               <div class="card mb-4 shadow-sm">
-                <img src="https://raw.githubusercontent.com/mathiasbrem/brazilian-airports-d3js/main/img/larissa.jpeg" class="card-img-top" alt="Larissa Carolina">
+                <img src="img/larissa.jpeg" class="card-img-top" alt="Larissa Carolina">
                 <div class="card-body">
                   <h5 class="card-title">Larissa Carolina</h5>
                   <p class="card-text">MECAI</p>
