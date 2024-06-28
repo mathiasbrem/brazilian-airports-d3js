@@ -10,6 +10,17 @@ body {
   align-items: flex-start;
 }
 
+.legend{
+  text-align: center;
+  padding: 4px;
+}
+
+p {
+  padding-top: 6px;
+  text-indent: 30px;
+  text-align: justify;
+}
+
 #sidebar-wrapper {
   width: 250px;
   position: fixed;
