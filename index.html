@@ -7,7 +7,91 @@
   <link rel="icon" href="http://www.icmc.usp.br/templates/icmc2015/img/ico/favicon.ico" />
   <title>Estudo sobre origem e destinos de voos no Brasil</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    #wrapper {
+      display: flex;
+      width: 100%;
+      align-items: flex-start;
+    }
+
+    .legend{
+      text-align: center;
+      padding: 4px;
+    }
+
+    p {
+      padding-top: 6px;
+      text-indent: 30px;
+      text-align: justify;
+    }
+
+    #sidebar-wrapper {
+      width: 250px;
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      overflow-y: auto;
+      background-color: #f8f9fa;
+      border-right: 1px solid #dee2e6;
+    }
+
+    .logo {
+      width: 80%;
+      margin: 20px auto;
+      display: block;
+    }
+
+    #page-content-wrapper {
+      width: calc(100% - 250px);
+      margin-left: 250px;
+      padding: 20px;
+    }
+
+    .container-fluid {
+      max-width: 950px;
+      margin: 0 auto;
+    }
+
+    .list-group-item-action:hover {
+      background-color: #f8f9fa;
+      color: #007bff;
+    }
+
+    section {
+      padding: 20px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+    }
+
+    #vis1, #vis2 {
+      width: 100%;
+      height: 500px; /* Altura fixa para o gráfico */
+    }
+
+
+    .counties {
+      fill: none;
+    }
+
+    .states {
+      fill: none;
+      stroke: #fff;
+      stroke-linejoin: round;
+    }
+
+    .mt-3{
+      text-align: center;
+    }
+  </style>
   <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -214,6 +298,7 @@ Apesar de estarem dispostas como informações de etapas básicas, as variáveis
           <p>O notebook Jupyter utilizado para a análise pode ser acessado <a href="link/to/jupyter-notebook" target="_blank">aqui</a>.</p>
         </section>
         <section id="video" class="my-5">
+          <h1 class="mt-3">Video de Apresentação</h1>
           <iframe width="560" height="315" src="https://www.youtube.com/embed/iApFb1ciMa0?si=muH9R6Wrq67ZJmYR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
         <section id="authors" class="my-5">
